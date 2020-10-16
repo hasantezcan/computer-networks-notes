@@ -57,8 +57,8 @@ Hadi internetin temel yapı taşları ile başlayalım.
 
 > Kısacası, bir ISP size genellikle bir ücret karşılığında İnternet erişimi sağlar. Bir ISP olmadan, çevrimiçi alışveriş yapamaz, Facebook'a erişemez veya bu sayfayı okuyamazsınız. İnternete bağlanmak için belirli telekomünikasyon, ağ ve yönlendirme ekipmanı gerekir. ISP'ler, kullanıcıların gerekli ekipmanı içeren ağlara erişmesine izin vererek kullanıcıların İnternet bağlantısı kurmasına olanak tanır.  
 
-> **ISS olmadan İnternete bağlanabilir miyim?**  
-Hayır, kuruluşların ve ev kullanıcılarının İnternet'e erişebilmek için bir ISS'ye ihtiyacı vardır. ISP'niz çalışmıyorsa, başka bir ISP üzerinden erişiminiz olmadıkça İnternete erişemezsiniz.  
+> **ISP olmadan İnternete bağlanabilir miyim?**  
+Hayır, her uç cihazın İnternet'e erişebilmesi için bir ISP'ye ihtiyacı vardır. Bu konuya [**1.2 Ağ Cihazları**](#12-ağ-cihazları) bölümünde daha detaylı değineceğiz.
 
 >**[[-1]](https://www.whoismyisp.org/articles/what-is-an-isp)**
 
@@ -782,3 +782,7 @@ güvenlik hakkında bölüm 8'de daha detaylıca konuşuyor olacağız.
 ..  
 ..  
 ..
+
+## Kaynakça 
+
+- [Computer networking a top-down approach 8th Edition](http://gaia.cs.umass.edu/kurose_ross/index.html) **J. Kurose & K. Ross**
