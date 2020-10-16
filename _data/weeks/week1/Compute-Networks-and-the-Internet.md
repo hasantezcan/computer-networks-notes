@@ -53,20 +53,16 @@ Hadi internetin temel yapı taşları ile başlayalım.
 - Birbirlerine ISP'ler ile bağlanırlar.
 
 
-<div style="background-color: #f9f9fa; padding: 25px;">
+> ## ISP Nedir?
 
-## ISP Nedir?
+> **ISP**, *İnternet Servis Sağlayıcısı* anlamına gelen bir kısaltmadır. İnternet Servis Sağlayıcısı, kuruluşlara ve ev kullanıcılarına İnternet erişimi sağlayan bir şirkettir.  
 
-**ISP**, *İnternet Servis Sağlayıcısı* anlamına gelen bir kısaltmadır. İnternet Servis Sağlayıcısı, kuruluşlara ve ev kullanıcılarına İnternet erişimi sağlayan bir şirkettir.  
+> Kısacası, bir ISP size genellikle bir ücret karşılığında İnternet erişimi sağlar. Bir ISP olmadan, çevrimiçi alışveriş yapamaz, Facebook'a erişemez veya bu sayfayı okuyamazsınız. İnternete bağlanmak için belirli telekomünikasyon, ağ ve yönlendirme ekipmanı gerekir. ISP'ler, kullanıcıların gerekli ekipmanı içeren ağlara erişmesine izin vererek kullanıcıların İnternet bağlantısı kurmasına olanak tanır.  
 
-Kısacası, bir ISP size genellikle bir ücret karşılığında İnternet erişimi sağlar. Bir ISP olmadan, çevrimiçi alışveriş yapamaz, Facebook'a erişemez veya bu sayfayı okuyamazsınız. İnternete bağlanmak için belirli telekomünikasyon, ağ ve yönlendirme ekipmanı gerekir. ISP'ler, kullanıcıların gerekli ekipmanı içeren ağlara erişmesine izin vererek kullanıcıların İnternet bağlantısı kurmasına olanak tanır.  
-
-**ISS olmadan İnternete bağlanabilir miyim?**
+> **ISS olmadan İnternete bağlanabilir miyim?**  
 Hayır, kuruluşların ve ev kullanıcılarının İnternet'e erişebilmek için bir ISS'ye ihtiyacı vardır. ISP'niz çalışmıyorsa, başka bir ISP üzerinden erişiminiz olmadıkça İnternete erişemezsiniz.  
 
-**[[-1]](https://www.whoismyisp.org/articles/what-is-an-isp)**
-
-</div>
+>**[[-1]](https://www.whoismyisp.org/articles/what-is-an-isp)**
 
 **Protokoler** her yerde
 
@@ -133,7 +129,7 @@ Internet yapısına daha yakından bakalım..
 
 > The Network Edge
 
-**İlgili bölümün [videolu anlatımı](https://www.youtube.com/watch?v=k8NmM-hImBU&feature=youtu.be), [](https://www.youtube.com/watch?v=74sEFYBBRAY&feature=youtu.be)[ders anlatım sunumu](http://gaia.cs.umass.edu/kurose_ross/videos/1/2/1.2_video_slides_posted.pptx).**
+> **İlgili bölümün [videolu anlatımı](https://www.youtube.com/watch?v=k8NmM-hImBU&feature=youtu.be), [](https://www.youtube.com/watch?v=74sEFYBBRAY&feature=youtu.be)[ders anlatım sunumu](http://gaia.cs.umass.edu/kurose_ross/videos/1/2/1.2_video_slides_posted.pptx).**
 
 ## a. **Network Edge (Uç cihaz)**
 
@@ -218,17 +214,14 @@ Bu yaklaşımda ise veriler frekans aralıklarına bölünerek değilde bir sır
   <img alt="TDM-and-FDM-example-2" src="images/Untitled%208.png" width="300">
 </p>
 
-<div style="background-color: #f9f9fa; padding: 25px;"> 
 
-**Topology nedir?**
+> **Topology nedir?**
  
-Topoloji, yüzeylerin ve şekillerin özellikleri ile ilgilenir ancak uzunluk ve açılarla ilgilenmez. Önem verdiği konu, şekiller başka bir şekle dönüştükleri zaman değişmeyen özellikleridir. Topolojide şekiller, her yönü ile çekiştirilebilir. Basitçe ifade etmek istenirse, topolojik nesneleri yırtmadan, kesmeden ve koparmadan, sadece eğip bükerek sürekli bir şekilde bir başka nesneye dönüştürmek mümkündür.
+> Topoloji, yüzeylerin ve şekillerin özellikleri ile ilgilenir ancak uzunluk ve açılarla ilgilenmez. Önem verdiği konu, şekiller başka bir şekle dönüştükleri zaman değişmeyen özellikleridir. Topolojide şekiller, her yönü ile çekiştirilebilir. Basitçe ifade etmek istenirse, topolojik nesneleri yırtmadan, kesmeden ve koparmadan, sadece eğip bükerek sürekli bir şekilde bir başka nesneye dönüştürmek mümkündür.
 
-Örneğin bilgisayar ağları (network), hem fiziksel hem de mantıksal topolojiye dayanmaktadır. Ağ üzerindeki bütün terminaller birbirine bağlıdır. Bu ara bağlantıların haritalanması fiziksel topolojidir, veri akışı ise ağın mantıksal topolojisini belirlemektedir. Başka bir ifade ile fiziksel topoloji, ağın fiziksel tasarımını belirtirken, mantıksal topoloji, bundan bağımsız olarak ağda verilerin nasıl işlendiğini belirtmektedir.
+> Örneğin bilgisayar ağları (network), hem fiziksel hem de mantıksal topolojiye dayanmaktadır. Ağ üzerindeki bütün terminaller birbirine bağlıdır. Bu ara bağlantıların haritalanması fiziksel topolojidir, veri akışı ise ağın mantıksal topolojisini belirlemektedir. Başka bir ifade ile fiziksel topoloji, ağın fiziksel tasarımını belirtirken, mantıksal topoloji, bundan bağımsız olarak ağda verilerin nasıl işlendiğini belirtmektedir.
 
-**[[Ağ topolojileri]](https://mail.ecomputernotes.com/computernetworkingnotes/computer-network/what-is-lan-topologies-explain-each-topology) -** *Bus, star vb...*
-
-</div>
+> **[[Ağ topolojileri]](https://mail.ecomputernotes.com/computernetworkingnotes/computer-network/what-is-lan-topologies-explain-each-topology) -** *Bus, star vb...*
 
 <br>
 
@@ -242,12 +235,7 @@ Bu örnekte gösterilen evler **`paylaşılmış bir ağı(shared access network
 
 Bir önceki örneğe göre kedimize ait bir üyeliğimiz mevcut **(subscriber line)** ve deminkinin aksine mahallede tek bir ağ yok da herkesin kendi ağı var gibi düşünebiliriz. Tabiki teknik olarak günün sonunda mahalledeki ortak kabloya bağlanacak olan bu ev ağları ISP'lerin müşterilerine suduğu özel hizmetler olarak nitelendiriliyor.
 
-<div style="background-color: #f9f9fa; padding: 10px 25px 5px 25px;">
-
-Bir önceki örnekde `**paylaşımlı (shared)**` bir ağ mevcut iken DSL örneğinde **`evlere atanmış (dedicated)`** bir kablo mevcut.
-
-</div>
-
+> Bir önceki örnekde **`paylaşımlı (shared)`** bir ağ mevcut iken DSL örneğinde **`evlere atanmış (dedicated)`** bir kablo mevcut.
 
 <p align="center">
   <img alt="A-typical-home-network" src="images/Untitled%209.png" width="500">
@@ -257,7 +245,7 @@ Bir önceki örnekde `**paylaşımlı (shared)**` bir ağ mevcut iken DSL örne�
 
 ---
 
-Bir konaktan veri nasıl göderiliyordu konuşmuştuk. Bu sefer ise bir mühendislik problemini ele alıcaz. `**Verinin Geçikmesi**`
+Bir konaktan veri nasıl göderiliyordu konuşmuştuk. Bu sefer ise bir mühendislik problemini ele alıcaz. **`Verinin Geçikmesi`**
 
 ## Verinin geçikmesi
 
@@ -272,10 +260,14 @@ Ya da farklı kaynaklardan gelen veri gelmesi durumunda bunu varış noktasında
 ***Peki bu geçikmeler neden kaynaklanıyor?***
 
 <p align="center">
-  <img alt="package-transform" src="images/Group_25.png" width="300">
+  <img alt="package-transform" src="images/Group_25.png" width="500">
 </p>
 
-$$\text {paket iletim gecikmesi} = \frac{L \text { (bits)}}{R \text { (bits/sec)}} $$
+<!-- $$\text {paket iletim gecikmesi} = \frac{L \text { (bits)}}{R \text { (bits/sec)}} $$ -->
+
+<p align="center">
+  <img alt="package-latency" src="images/Untitled%2010.png" width="400">
+</p>
 
 **L** = paket boyutu
 
@@ -290,7 +282,7 @@ $$\text {paket iletim gecikmesi} = \frac{L \text { (bits)}}{R \text { (bits/sec)
 Bu bölümde bağlatı kabloları ile ilgili konuşacağız. Fiziksel ders ortamı var oluşursa bir ağ kablosu nasıl çakılır bunu uygulayark göreceğiz. [**RJ453U katogori 5 kabloya nasıl çakılır?**](https://www.youtube.com/watch?v=FYKN0vK6VFk) 
 
 <p align="center">
-  <img alt="RJ453U" src="images/Untitled%2011.png" width="400">
+  <img alt="RJ453U" src="images/Untitled%2011.png" width="450">
 </p>
 
 **bit:** verici / alıcı çiftleri arasında yayılan bilgicikler
@@ -352,7 +344,7 @@ Birbirine bağlı router'lar ağı.
 Uç cihazlara destek veren **router** ve **switch** dediğimiz cihazlar mevcut. Bu cihazlar paket switch denilen olayı gerçekleştiriyorlar. Paketi bir yerden alıp anahtarlayıp bir başka konuma iletiyorlar.
 
 <p align="center">
-  <img alt="anahtarlama-ve-iletme" src="images/IMG_20201012_190041.jpg" width="300">
+  <img alt="anahtarlama-ve-iletme" src="images/IMG_20201012_190041.jpg" width="500">
 </p>
 
 Network Core'da iki temel işlevimiz var bunlar: **Forwarding** ve **Routing**
@@ -372,7 +364,7 @@ Yön belirleme.
 > determine source-destination paths taken by packets
 
 
-<div style="display: flex">
+<!-- <div style="display: flex">
 <p align="center" style="padding: 10px">
   <img alt="Forwarding" src="images/IMG_20201012_183152_(2).jpg" width="320">
   <br>
@@ -384,7 +376,24 @@ Yön belirleme.
   <br>
 	<em style="color: grey">Routing (yönlendirme)</em>
 </p>
-</div>
+</div> -->
+
+![alt](images/IMG_20201012_183152_(2).jpg) | ![alt](images/IMG_20201012_183158_(2).jpg)
+- | - 
+Forwarding (Anahtarlama) | Routing (yönlendirme)
+
+<table><tr>
+<td> <p align="center" style="padding: 10px">
+  <img alt="Forwarding" src="images/IMG_20201012_183152_(2).jpg" width="320">
+  <br>
+	<em style="color: grey">Forwarding (Anahtarlama)</em>
+</p> </td>
+<td> <p align="center">
+  <img alt="Routing" src="images/IMG_20201012_183158_(2).jpg" width="515">
+  <br>
+	<em style="color: grey">Routing (yönlendirme)</em>
+</p> </td>
+</tr></table>
 
 ---
 
@@ -420,7 +429,7 @@ Paket iletilmesinde yaşanan kuyruklarda akla ilk **Paket kaybı yaşanır mı?*
 > Bu sorulara ilerleyeden derslerede cevap arıyor olacağız.
 
 <p align="center">
-  <img alt="package loss" src="images/Untitled%2015.png" width="500">
+  <img alt="package loss" src="images/Untitled%2015.png" width="600">
 </p>
 
 ## Paket anahtarlamaya altarnatif: Devre Anahtarlama
@@ -435,11 +444,7 @@ Sadece hedefle sizin aranızda sadece sizin kullanımıza açık bir kanaldır.
 
 Bunu askeri telefon hatlarına benzetebiliriz. İki cephe arasında iletişim kurmak için sadece birbirine bağlı telefonlar.
 
-
-<div style="background-color: #f9f9fa; padding: 10px 25px 5px 25px;">
-Devre anahtarlamayı iki uç cihaz arasında doğrudan bir kanal oluşturulması gibi düşünebiliriz.
-</div>
-
+> Devre anahtarlamayı iki uç cihaz arasında doğrudan bir kanal oluşturulması gibi düşünebiliriz.
 
 <div style="display: flex">
   <p align="center" style="padding: 10px">
@@ -598,7 +603,11 @@ gibi sorulara cevap arayacağız.
 
 <br>
 
-$$dnodal = dproc + dqueue + dtrans +  dprop$$
+<!-- $$dnodal = dproc + dqueue + dtrans +  dprop$$ -->
+
+<p align="center">
+  <img alt="img-name" src="images/dnodal.png" width="400">
+</p>
 
 <br>
 
@@ -626,8 +635,12 @@ a: average packet arrival rate - (ortalam paket varış oranı)
 L: packet length (bits) - (paket büyüklüğü)  
 R: link bandwidth (bit transmission rate) - bağlantı bant genişliği (bit aktarım hızı)
 
-$$\text {“traffic 
-intensity (yoğunluğu)”} = \frac{L .a}{R} : \frac{ \text{arrival rate of bits}}{\text{service rate of bits}}  $$
+<!-- $$\text {“traffic 
+intensity (yoğunluğu)”} = \frac{L .a}{R} : \frac{ \text{arrival rate of bits}}{\text{service rate of bits}}  $$ -->
+
+<p align="center">
+  <img alt="img-name" src="images/traffic-intensity.png" width="500">
+</p>
 
 La/R ~ 0: avg. queueing delay küçük  
 La/R -> 1: avg. queueing delay büyük  
