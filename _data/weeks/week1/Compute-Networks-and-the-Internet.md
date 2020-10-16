@@ -9,9 +9,7 @@
 ---
 
 
-<div style="background-color: #f9f9fa; padding: 10px 25px 5px 25px;">
-Bu ilk bölümde tüm konu başlıklarına genel bir bakış atıyoruz. Devamında konular üzerinde derinleşerek devam ediyor olacağız.
-</div>
+> **`Bu ilk bölümde tüm konu başlıklarına genel bir bakış atıyoruz. Devamında konular üzerinde derinleşerek devam ediyor olacağız.`**
 
 <br>
 
@@ -30,7 +28,7 @@ Ve bilgisyar ağlarının temel kavramlarına değiniyor olacağız.
 
 > What is the Internet?
 
-**İlgili bölümün [videolu anlatımı](https://www.youtube.com/watch?v=74sEFYBBRAY&feature=youtu.be), [](https://www.youtube.com/watch?v=74sEFYBBRAY&feature=youtu.be)[ders anlatım sunumu](http://gaia.cs.umass.edu/kurose_ross/videos/1/1/1.1_video_slides_posted.pptx).**
+>**İlgili bölümün [videolu anlatımı](https://www.youtube.com/watch?v=74sEFYBBRAY&feature=youtu.be), [](https://www.youtube.com/watch?v=74sEFYBBRAY&feature=youtu.be)[ders anlatım sunumu](http://gaia.cs.umass.edu/kurose_ross/videos/1/1/1.1_video_slides_posted.pptx).**
 
 <p align="center">
 	<a href="https://www.youtube.com/watch?v=Vywf48Dhyns">
@@ -363,36 +361,21 @@ Yön belirleme.
 
 > determine source-destination paths taken by packets
 
-
-<!-- <div style="display: flex">
-<p align="center" style="padding: 10px">
-  <img alt="Forwarding" src="images/IMG_20201012_183152_(2).jpg" width="320">
-  <br>
-	<em style="color: grey">Forwarding (Anahtarlama)</em>
-</p>
-
-<p align="center">
-  <img alt="Routing" src="images/IMG_20201012_183158_(2).jpg" width="515">
-  <br>
-	<em style="color: grey">Routing (yönlendirme)</em>
-</p>
-</div> -->
-
-![alt](images/IMG_20201012_183152_(2).jpg) | ![alt](images/IMG_20201012_183158_(2).jpg)
-- | - 
-Forwarding (Anahtarlama) | Routing (yönlendirme)
-
 <table><tr>
-<td> <p align="center" style="padding: 10px">
-  <img alt="Forwarding" src="images/IMG_20201012_183152_(2).jpg" width="320">
-  <br>
-	<em style="color: grey">Forwarding (Anahtarlama)</em>
-</p> </td>
-<td> <p align="center">
-  <img alt="Routing" src="images/IMG_20201012_183158_(2).jpg" width="515">
-  <br>
-	<em style="color: grey">Routing (yönlendirme)</em>
-</p> </td>
+<td> 
+  <p align="center" style="padding: 10px">
+    <img alt="Forwarding" src="images/IMG_20201012_183152_(2).jpg" width="320">
+    <br>
+    <em style="color: grey">Forwarding (Anahtarlama)</em>
+  </p> 
+</td>
+<td> 
+  <p align="center">
+    <img alt="Routing" src="images/IMG_20201012_183158_(2).jpg" width="515">
+    <br>
+    <em style="color: grey">Routing (yönlendirme)</em>
+  </p> 
+</td>
 </tr></table>
 
 ---
@@ -444,25 +427,26 @@ Sadece hedefle sizin aranızda sadece sizin kullanımıza açık bir kanaldır.
 
 Bunu askeri telefon hatlarına benzetebiliriz. İki cephe arasında iletişim kurmak için sadece birbirine bağlı telefonlar.
 
-> Devre anahtarlamayı iki uç cihaz arasında doğrudan bir kanal oluşturulması gibi düşünebiliriz.
+> **Devre anahtarlamayı iki uç cihaz arasında doğrudan bir kanal oluşturulması gibi düşünebiliriz.**
 
-<div style="display: flex">
+<table><tr>
+<td> 
   <p align="center" style="padding: 10px">
     <img alt="packet-switching" src="images/paket-anahtalama.png.jpg" width="300">
     <br>
     <em style="color: grey">packet switching</em>
-  </p>
-
+  </p> 
+</td>
+<td> 
   <p align="center">
     <img alt="circuit-switching" src="images/devre-ana_hteirlama.png.jpg" width="350">
     <br>
     <em style="color: grey">circuit switching</em>
-  </p>
-</div>
+  </p> 
+</td>
+</tr></table>
 
-<div style="background-color: #f9f9fa; padding: 10px 25px 5px 25px;">
-Devre anahtarlamanını paket anahtarlamdan en büyük farkı: paylaşımlı bir yapısının olmamasıdır.
-</div>
+> **Devre anahtarlamanını paket anahtarlamdan en büyük farkı: paylaşımlı bir yapısının olmamasıdır.**
 
 ## Devre Anahtarlama: FDM ve TDM
 
@@ -476,31 +460,30 @@ FDM ve TDM hakkında **The Network Edge bölümünde** zaten konuşmuştuk. İle
 
 > Paket anahtarlama devre anahtarlamaya karşı
 
-
-<div style="display: flex">
-  <div style="padding: 10px">
-    <p align="center" >
+<table><tr>
+<td> 
+  <p align="center" >
     <img alt="img-name" src="images/Untitled%2016.png" width="300">
-    </p>
+    </p> 
 
-### Packet Switching
+  ### Packet Switching
 
 - Paylaşımlı kanal kullanımı.(Daha yoğun bir kullanımı mevcut!)
 - Daha fazla kullanıcıya hizmet verebilir. Daha yaygın kullanılıyor
 - 1 Gbps'lık bir bant genişliğinde yaklaşık 35 kullanıcıya hizmet verebilir. `(Kullcanıcı başı 100Mbps)`
-  </div>
-
-  <div>
+</td>
+<td> 
   <p align="center">
     <img alt="img-name" src="images/Untitled%2017.png" width="500">
   </p>
-### Circut Switching
+
+  ### Circut Switching
 
 - Adanmış kanal kullanımı
 - Daha maliyetli olduğu için az tercih edilen bir yöntem.
 - 1 Gbps'lık bir bant genişliğinde en fazla 10 kullanıcıya hizmet sunabilir. `(Kullcanıcı başı 100Mbps)`
-  </div>
-</div>
+</td>
+</tr></table>
 
 ## Peki `Packet Switching` , `Circut Switching`'e göre daha baskın bir yöntem mi?
 
@@ -530,13 +513,13 @@ Tüm ISP'leri birbirine bağlamaya çalşmak **`ölçeklendirebilecek bir bağla
   <img alt="img-name" src="images/Untitled%2020.png" width="500">
 </p>
 
-Bir çok olan bu ISP'leri birine bağlamak yerine `**global bir ISP**`'ye bağlayıp ölçeklendirilebilir bir bağlantı elde edebilirz.
+Bir çok olan bu ISP'leri birine bağlamak yerine **`global bir ISP*`**'ye bağlayıp ölçeklendirilebilir bir bağlantı elde edebilirz.
 
 <p align="center">
   <img alt="img-name" src="images/Untitled%2021.png" width="500">
 </p>
 
-Tabi bu evrensel ISP işi makul bir iş tipi olacağından bu hizmeti veren başka `**Evrensel ISP'ler**` de var olacaktır. 
+Tabi bu evrensel ISP işi makul bir iş tipi olacağından bu hizmeti veren başka **`Evrensel ISP'ler`** de var olacaktır. 
 
 <p align="center">
   <img alt="img-name" src="images/Untitled%2022.png" width="500">
@@ -564,14 +547,8 @@ Ayrıca **`içerik sağlayıcı ağlar (content provider networks)`** -ör. Goog
 **`content provider networks`**: (Google, Facebook vb..) Veri merkezlerini **`teir-1`** ve **`regional`** ISP'leri atlayarak internete bağlayan özel ağlar.
 
 
-
-<div style="background-color: #f9f9fa; padding: 10px 25px 5px 25px;">
-
-**`SORU:`** Access ISP'nin şirket bazında örneği nedir?
-
-**`Cevap:`** ?
-
-</div>
+> **`SORU:`** **Access ISP'nin şirket bazında örneği nedir?**  
+> **`Cevap:`** ?
 
 ---
 
@@ -614,12 +591,12 @@ gibi sorulara cevap arayacağız.
 [Transmission versus Propagation Delay simulation](https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/transmission-vs-propogation-delay/transmission-propagation-delay-ch1/index.html)
 
 
-<div style="background-color: #f9f9fa; padding: 10px 25px 5px 25px;">
 
-**Anoloji (benzeşim);**  
+
+> **Anoloji (benzeşim);**  
 Bir akıl yürütme yolu olarak, iki şey arasındaki benzerliğe dayanan analoji, bu iki şeyden birisi hakkında varılan hükmün ve ulaşılan yargının, diğeri hakkında da geçerli olması anlamına gelir. Bu durumda, bir nesne ya da olay hakkında ileri sürülen bir yargı, ona benzeyen başka bir nesne ya da olay için de geçerlidir. **[[2]](https://www.felsefe.gen.tr/analoji-benzesim-nedir-ne-demektir/)**
 
-</div>
+
 
 ## Karavan analojisi
 
