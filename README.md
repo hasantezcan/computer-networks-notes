@@ -17,6 +17,8 @@ Lecturer: [**`Dr. Alper Uğur`**](https://www.pau.edu.tr/bilgisayar/tr/sayfa/aka
 <p align="center">
 	<a href="#">
 		<img alt="sınıf" src="_data/images/2020-10-15_19-49.png">
+		<br>
+		<em><span>Photo by <a href="https://unsplash.com/@dnevozhai?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Denys Nevozhai</a> on <a href="https://unsplash.com/s/photos/network?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></em>		
 	</a>
 </p>
 
