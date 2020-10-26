@@ -6,11 +6,13 @@
 
 Lecturer: [**`Dr. Alper Uğur`**](https://www.pau.edu.tr/bilgisayar/tr/sayfa/akademik-kadro-17#:~:text=Alper%20Uğur)
 
-| Week  |                        Teorical Lesson's Notes                        |                     Lab Lesson's Notes                     | Weekly Quiz's Notes |
-| :---: | :-------------------------------------------------------------------: | :--------------------------------------------------------: | :-----------------: |
-|   1   | [**`Chapter 1 - Computer Networks and the Internet`**](/_data/weeks/week1/Compute-Networks-and-the-Internet.md) | **Notes**, [*`doc`*](/_data/weeks/week1/doc/week1-lab.pdf) |
-|   2   |                   **Chapter 2 - Application Layer**                   |            **Notes**, *`doc`*             |
-
+| Week  |                                             Teorical Lesson's Notes                                             |                     Lab Lesson's Notes                     | Weekly Quiz | Home Works |
+| :---: | :-------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------: | :---------: | :--------: |
+|   1   | [**`Chapter 1 - Computer Networks and the Internet`**](/_data/weeks/week1/Compute-Networks-and-the-Internet.md) | **Notes**, [*`doc`*](/_data/weeks/week1/doc/week1-lab.pdf) |             |            |
+|   2   |                                        **Chapter 2 - Application Layer**                                        |                     **Notes**, *`doc`*                     |             |            |
+|   3   |                                     **Chapter 2 - Application Layer cont.**                                     |                     **Notes**, *`doc`*                     |             |  [1],[2]   |
+|   4   |                                         **Chapter 3 - Transport Layer**                                         |                     **Notes**, *`doc`*                     |             |            |
+	
 
 <p align="center">
 	<a href="#">
