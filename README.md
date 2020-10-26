@@ -10,7 +10,7 @@ Lecturer: [**`Dr. Alper Uğur`**](https://www.pau.edu.tr/bilgisayar/tr/sayfa/aka
 | :---: | :-------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------: | :---------: | :--------: |
 |   1   | [**`Chapter 1 - Computer Networks and the Internet`**](/_data/weeks/week1/Compute-Networks-and-the-Internet.md) | **Notes**, [*`doc`*](/_data/weeks/week1/doc/week1-lab.pdf) |             |            |
 |   2   |                                        **Chapter 2 - Application Layer**                                        |                     **Notes**, *`doc`*                     |             |            |
-|   3   |                                     **Chapter 2 - Application Layer cont.**                                     |                     **Notes**, *`doc`*                     |             |  [1],[2]   |
+|   3   |                                     **Chapter 2 - Application Layer cont.**                                     |                     **Notes**, *`doc`*                     |             |  [**`DNS Güvenliği`**](/_data/weeks/week3/dns-security.md),[2]   |
 |   4   |                                         **Chapter 3 - Transport Layer**                                         |                     **Notes**, *`doc`*                     |             |            |
 	
 
@@ -18,8 +18,10 @@ Lecturer: [**`Dr. Alper Uğur`**](https://www.pau.edu.tr/bilgisayar/tr/sayfa/aka
 	<a href="#">
 		<img alt="sınıf" src="_data/images/2020-10-15_19-49.png">
 		<br>
-		<em><span>Photo by <a href="https://unsplash.com/@dnevozhai?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Denys Nevozhai</a> on <a href="https://unsplash.com/s/photos/network?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></em>		
 	</a>
+	<em>
+	<span>Photo by <a href="https://unsplash.com/@dnevozhai?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Denys Nevozhai</a> on <a href="https://unsplash.com/s/photos/network?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+	</em>		
 </p>
 
 > **If you see any mistakes or if you want to make any improvement on this repo you can** [**`pull the request here.`**](https://github.com/hasantezcan/computer-network-notes/pulls) 
