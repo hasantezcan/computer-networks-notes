@@ -9,7 +9,7 @@ Lecturer: [**`Dr. Alper Uğur`**](https://www.pau.edu.tr/bilgisayar/tr/sayfa/aka
 | Week  |                                             Teorical Lesson's Notes                                             |                     Lab Lesson's Notes                     | Weekly Quiz | Home Works |
 | :---: | :-------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------: | :---------: | :--------: |
 |   1   | [**`Chapter 1 - Computer Networks and the Internet`**](/_data/weeks/week1/Compute-Networks-and-the-Internet.md) | **Notes**, [*`doc`*](/_data/weeks/week1/doc/week1-lab.pdf) |             |            |
-|   2   |                                        **Chapter 2 - Application Layer**                                        |                     **Notes**, *`doc`*                     |             |            |
+|   2   |                                        [**`Chapter 2 - Application Layer`**](/_data/weeks/week2/application-layer.md)                                        |                     **Notes**, *`doc`*                     |             |            |
 |   3   |                                     **Chapter 2 - Application Layer cont.**                                     |                     **Notes**, *`doc`*                     |             |  [**`DNS Güvenliği`**](/_data/weeks/week3/dns-security.md),[2]   |
 |   4   |                                         **Chapter 3 - Transport Layer**                                         |                     **Notes**, *`doc`*                     |             |            |
 	
