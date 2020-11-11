@@ -177,7 +177,7 @@ Bazı uygulamalarda bu tolerans mevcutken bazılarında veri iletiminde hata tol
 Tabi bazı uygulamalar için bu zamanlama o kadar da önemli değildir. Örneğin bir **e posta uygulamasının** verileri illa anlık olarak göndermesine gerek yoktur. Bu tür uygulamalarda bu zamanalama aralığını **biraz daha geniş** tutabiliriz. 
 
 <p align="center">
-    <img alt="imgName" src="images/lag.gif" width="800">
+    <img alt="imgName" src="images/lag.gif" width="500">
     <br>
     <em></em>
 </p>
@@ -203,7 +203,7 @@ Uygulama katmanında bu katmalardan güvenlikle ilgili bilgileri isteyebiliriz.
 > **Transport service requirements: common apps**
 
 <p align="center">
-    <img alt="imgName" src="images/Untitled%203.png" width="800">
+    <img alt="imgName" src="images/Untitled%203.png" width="600">
     <br>
     <em></em>
 </p>
@@ -245,7 +245,7 @@ Connection oriented değil veri bütünlüğünü garanti etmez.
 > Internet applications, and transport protocols
 
 <p align="center">
-    <img alt="imgName" src="images/Untitled%204.png" width="800">
+    <img alt="imgName" src="images/Untitled%204.png" width="600">
     <br>
     <em></em>
 </p>
@@ -544,11 +544,11 @@ Bu sorunda ilk aklımıza gelen çözüm şekli şirket ağı ile herkese açık
 
 Hit rate'imiz düşük ise local web cashe bir işe yaramayacak demektir. Çünkü her seferinde farklı verileri internetten talep ediyor olduğundan web cahse bu durumda bize verim sağlayamaz. (Mis fazla olursa web cashe bir işe yaramaz)
 
-**Hit rate nedir?**
+> **Hit rate nedir?**
 
-Cache serverde var olan bir bilgiyi talep ettiğinizde bu **hit (isabet)** olarak adlandırlır. Ama web cache'de mevcut olmayan bir veriyi talep ettiğinizde web cashe size yardımcı olamayaktır ve bu durumda **mis (ıska)** deriz.
+> Cache serverde var olan bir bilgiyi talep ettiğinizde bu **hit (isabet)** olarak adlandırlır. Ama web cache'de mevcut olmayan bir veriyi talep ettiğinizde web cashe size yardımcı olamayaktır ve bu durumda **mis (ıska)** deriz.
 
-Web cache'in bize fayda sağlaması için hit'lerin daha çok olması gereklidir. Zaten hep mis (ıska) yapıyorsa burada cashe'e pek de gerek yoktur.
+> Web cache'in bize fayda sağlaması için hit'lerin daha çok olması gereklidir. Zaten hep mis (ıska) yapıyorsa burada cashe'e pek de gerek yoktur.
 
 Önbellek isabet oranının (cache hit rate) **0,4** olduğunu varsayalım:
 
