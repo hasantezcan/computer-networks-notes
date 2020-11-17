@@ -49,10 +49,10 @@ Bu tarz uygulamaların uygulama katmanında nasıl yer aldığı ağa  nasıl bi
 
 Bu güne kadar bir ağ uygulaması geliştirdiyseniz genellikle sadece ağ uçlarını düşünerek hareket  etmişsinizdir. Uygulamanın sunucuda ve istemcide nasıl çalışacağına konsantre olmuşsunuzdur. Diğer ağ katmanlarında işlerin nasıl yürüdüğü ile pek ilgenmedik. Mesela;
 
-- Hangi routerdan bu veri nasıl geçecek
-- Herhangi bir aksaklık olduğunda uygulama seviyesinde düşündüğüm çözümlerin haricinde daha alt seviyede, mesela fiziksel seviyede bu aksaklığı nasıl giderebilirim
+- Hangi routerdan bu veri nasıl geçecek?
+- Herhangi bir aksaklık olduğunda uygulama seviyesinde düşündüğüm çözümlerin haricinde daha alt seviyede, mesela fiziksel seviyede bu aksaklığı nasıl giderebilirim?
 
-gibi meselerle daha önce hiç ilgilenmedik.
+Gibi meselerle daha önce hiç ilgilenmedik.
 
 Bunun sebebi ağın katmanlı bir yapısının olması. Bir uygulama geliştiriken uygulama katmanında hareket ederiz, fiziksel katmanda işlemler yapmamıza gerek kalmaz. Orada yaşanan sorunlar kendi katman seviyesine çözülür. 
 
@@ -325,7 +325,7 @@ Tabi bu cevaplar her zaman aynı olmayacak istek gönderen cihazın türüne gö
 
 - **HTTP stateles**'dir yani sunucu, istemcinin geçmişi hakkında bir bilgi (durum / state) saklamaz.
 
-Öteyandan günlük hayatta HTTP ile iletişimini sağladığımız web sayfarında bizimle ilgili verilerin saklandığını, sitenin bizi tanıdığını görmekteyiz. Bizimle ilgili tutulan bu verilerin HTTP ile bir ilgisi bulunmamakta. Bu veriler cookie, çerez dediğimiz yöntemler ile tarayıcılarda saklanmakta bu saklanan durumların HTTP ile doğrudan bir ilişkisi bulunmuyor. HTTP bu habittatta sadece verinin iletişimi ile ilgilienmekte. 
+Öte yandan günlük hayatta HTTP ile iletişimini sağladığımız web sayfarında bizimle ilgili verilerin saklandığını, sitenin bizi tanıdığını görmekteyiz. Bizimle ilgili tutulan bu verilerin HTTP ile bir ilgisi bulunmamakta. Bu veriler cookie, çerez dediğimiz yöntemler ile tarayıcılarda saklanmakta bu saklanan durumların HTTP ile doğrudan bir ilişkisi bulunmuyor. HTTP bu habittatta sadece verinin iletişimi ile ilgilienmekte. 
 
 ---
 
@@ -574,7 +574,7 @@ Bu da erişim bağlantısında düşük kuyuruk geçikmesi anlamına gelir.
 
 > Conditional GET
 
-Normak get isteğinin yanısıra bu istekte bir şart söz konusu. Bir önceki isteiğinden bu yana bir veri güncellemesi olduysa cevap ver yoksa cevap verme gibi bir mantığa dayanıyor.
+Normal get isteğinin yanı sıra bu istekte bir şart söz konusu. Bir önceki isteiğinden bu yana bir veri güncellemesi olduysa cevap ver yoksa cevap verme gibi bir mantığa dayanıyor.
 
 Örneğin bir futbol maçının sonuçlarını takip ediyorsunuz en son **`2 - 1`** olarak aldığınız yanıtdan sonra istek atmaya devam ediyorsunuz ne zaman bir skor güncellemesi oldu o zaman isteğini yanıt buluyor cevap size **`2 - 2`** olarak gönderiliyor. 
 
