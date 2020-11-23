@@ -6,12 +6,12 @@
 
 Lecturer: [**`Dr. Alper Uğur`**](https://www.pau.edu.tr/bilgisayar/tr/sayfa/akademik-kadro-17#:~:text=Alper%20Uğur)
 
-| Week  |                                             Teorical Lesson's Notes                                             |                     Lab Lesson's Notes                     | Weekly Quiz | Home Works |
-| :---: | :-------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------: | :---------: | :--------: |
-|   1   | [**`Chapter 1 - Computer Networks and the Internet`**](/_data/weeks/week1/Compute-Networks-and-the-Internet.md) | [**Notes**](/_data/weeks/week1/lab1.md), [*`doc`*](/_data/weeks/week1/doc/week1-lab.pdf) |             |            |
-|   2   |                                        [**`Chapter 2 - Application Layer`**](/_data/weeks/week2/application-layer.md)                                        |                     **Notes**, *`doc`*                     |             |            |
-|   3   |                                     **Chapter 2 - Application Layer cont.**                                     |                     **Notes**, *`doc`*                     |             |  [**`DNS Güvenliği`**](/_data/weeks/week3/dns-security.md),[2]   |
-|   4   |                                         **Chapter 3 - Transport Layer**                                         |                     **Notes**, *`doc`*                     |             |            |
+| Week  |                                             Teorical Lesson's Notes                                             |                                    Lab Lesson's Notes                                    | Weekly Quiz |                          Home Works                           |
+| :---: | :-------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :---------: | :-----------------------------------------------------------: |
+|   1   | [**`Chapter 1 - Computer Networks and the Internet`**](/_data/weeks/week1/Compute-Networks-and-the-Internet.md) | [**Notes**](/_data/weeks/week1/lab1.md), [*`doc`*](/_data/weeks/week1/doc/week1-lab.pdf) |             |                                                               |
+|   2   |                 [**`Chapter 2 - Application Layer`**](/_data/weeks/week2/application-layer.md)                  |                                    **Notes**, *`doc`*                                    |             |                                                               |
+|   3   |            [**`Chapter 2 - Application Layer cont. (DNS)`**](/_data/weeks/week3/application-layer(cont).md)             |                                    **Notes**, *`doc`*                                    |             | [**`DNS Güvenliği`**](/_data/weeks/week3/dns-security.md),[2] |
+|   4   |                                         **Chapter 3 - Transport Layer**                                         |                                    **Notes**, *`doc`*                                    |             |                                                               |
 	
 
 <p align="center">
