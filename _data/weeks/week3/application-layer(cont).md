@@ -63,7 +63,7 @@ Tek bir DNS ile çalışmamız gerektiğini öğrendik. Peki birden fazla olan b
 - Hiyararşik, dağıtık veritabanı yapısı ile kurgulacağız.
 
 <p align="center">
-    <img alt="imgName" src="images/Untitled.png" width="400">
+    <img alt="imgName" src="images/Untitled.png" width="600">
     <br>
     <em></em>
 </p>
