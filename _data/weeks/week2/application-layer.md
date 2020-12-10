@@ -35,7 +35,7 @@ Ağı yoracak, ağda veri trasnferine neden olacak uygulamalardır. Örneğin;
 - Sosyal medya uygulamaları **facebook, twitter** gibi
 - Web uygulamaları **medium** gibi
 - Mesajlaşma uygulamaları **telegram** gibi
-- Dosya trasnfleri yaptığımız uygulamalar
+- Dosya transferi yaptığımız uygulamalar
 - Video yayını ya da depolaması yaptığımız uygulamalar **youtube, netflix, twitch** gibi
 - **(Voice over IP)** IP üzerinden ses uygulamaları **Skype, discord** gibi  ****
 - Gerçek zamanlı video görüşme uygulamaları **Zoom, Hangouts** gibi
@@ -52,7 +52,7 @@ Bu güne kadar bir ağ uygulaması geliştirdiyseniz genellikle sadece ağ uçla
 - Hangi routerdan bu veri nasıl geçecek?
 - Herhangi bir aksaklık olduğunda uygulama seviyesinde düşündüğüm çözümlerin haricinde daha alt seviyede, mesela fiziksel seviyede bu aksaklığı nasıl giderebilirim?
 
-Gibi meselerle daha önce hiç ilgilenmedik.
+Gibi meselelerle daha önce hiç ilgilenmedik.
 
 Bunun sebebi ağın katmanlı bir yapısının olması. Bir uygulama geliştiriken uygulama katmanında hareket ederiz, fiziksel katmanda işlemler yapmamıza gerek kalmaz. Orada yaşanan sorunlar kendi katman seviyesine çözülür. 
 
@@ -89,7 +89,7 @@ Biri istekte bulunan bir diğeri de bu isteği karşılamya çalışan iki uç'u
 > Peer-peer architecture
 
 - Sunucuda olduğu gibi herzaman ayakata olan bir sitem yok. Herkes bağlanıp kopabilir.
-- Her sunucu aynı zamanda istemci; her istemcide aynı zamnda bir sunucu görevi görebiliyor.
+- Her sunucu aynı zamanda istemci; her istemcide aynı zamanda bir sunucu görevi görebiliyor.
 - Konar göçer bir mimari
 - Sadece istemcilerin sunuculara bağlandığı bir akış yapısı yok her istemici birbiri ile doğrudan haberleşebilir.
 - Ölçeklenebilirlik ağa yeni bir peer'ın (istemcinin) katılması ile mümkün.
@@ -130,13 +130,13 @@ Soket uygulama katmanı ile iletim katmanı arasında bir arabirimdir (interface
 
 Ağ yapısında birçok adres kullanıyoruz. IP adresleri, MAC adresleri, Port adresleri vb.. gibi 
 
-Bu adresler aslında bir process'in **belirtecleridir**. örenğin bir gnu/linux işletim sisteminde bu adresler ile o process'leri durdurabiliriim(kill)
+Bu adresler aslında bir process'in **belirteçleridir**. Örneğin bir gnu/linux işletim sisteminde bu adresler ile o process'leri durdurabilirim (kill).
 
 Bu adresler proceller arasında haberleşmeyi, iletişimi sağlarken kullandığımız belirteclerdir.  
 
 **Aynı ip'ye bağlı portlar var bunlar ne işe yarıyor?**
 
-Bir bilgisayarda çalışırken bir yandan müzik dinlerken öbür yandan tarayıcıda gezinebiliriz. Bu durumda tek ip'ye sahip bilgisayarımızın birden fazla sunucu ile habeleşmesi gerekir. İp adresimizle ilişkili olan portlar sayesinde bu habeleşmeyi sağlarız. 80 portunu HTTP istek ve yanıtlarına tahsis etmişken bir başka portu spotıfy için kullanabiliriz.  
+Bir bilgisayarda çalışırken bir yandan müzik dinlerken öbür yandan tarayıcıda gezinebiliriz. Bu durumda tek ip'ye sahip bilgisayarımızın birden fazla sunucu ile habeleşmesi gerekir. İp adresimizle ilişkili olan portlar sayesinde bu habeleşmeyi sağlarız. 80 portunu HTTP istek ve yanıtlarına tahsis etmişken bir başka portu spotify için kullanabiliriz.  
 
 ## An application-layer protocol defines
 
@@ -160,7 +160,7 @@ Temel olarak iletişimin nasıl gerçekleştiğini zaten öğrendik. Ama buna ek
 >**What transport service does an app need?** -
 > *Bu kısım iletim katmanı bölümünde daha detaylı incelenecektir.*
 
-**Data integrity (Veri bütünlüğü),** İstemciden göderdiğimiz verinin sunucuya arada veri kaybı yaşamadan doğru şekilde gitmesi gerekir. Bu sebeple iletim katmanı, iletim sırasında veri kaybının mimumum düzeyde olacağını garantilemelirdir.
+**Data integrity (Veri bütünlüğü),** İstemciden göderdiğimiz verinin sunucuya arada veri kaybı yaşamadan doğru şekilde gitmesi gerekir. Bu sebeple iletim katmanı, iletim sırasında veri kaybının mimumum düzeyde olacağını garantilemelidir.
 
 Bazı uygulamalarda bu tolerans mevcutken bazılarında veri iletiminde hata tolerası sıfırdır. Örneğin;
 
@@ -174,7 +174,7 @@ Bazı uygulamalarda bu tolerans mevcutken bazılarında veri iletiminde hata tol
 
 **Timing (zamanlama),** bazı uygulamalar için zamanlama önemlidir. Paketlerin istemciden sunucuya belirli bir zaman diliminde ulaşmasını isterler. Bu zaman dilimi aşıldığı zaman performans sorunları başlar. Bu uygulamalara en güzel örnek **çevrimiçi oyunlar**dır. Oyunlarda paket iletim hızı düştüğünde oyun oynanamaz hale gelir. Bu sebeple iletim hızını yüksek tutmak gerekir. Bu tolere edilemezdir.
 
-Tabi bazı uygulamalar için bu zamanlama o kadar da önemli değildir. Örneğin bir **e posta uygulamasının** verileri illa anlık olarak göndermesine gerek yoktur. Bu tür uygulamalarda bu zamanalama aralığını **biraz daha geniş** tutabiliriz. 
+Tabi bazı uygulamalar için bu zamanlama o kadar da önemli değildir. Örneğin bir **e-posta uygulamasının** verileri illa anlık olarak göndermesine gerek yoktur. Bu tür uygulamalarda bu zamanalama aralığını **biraz daha geniş** tutabiliriz. 
 
 <p align="center">
     <img alt="imgName" src="images/lag.gif" width="500">
@@ -186,13 +186,13 @@ Tabi bazı uygulamalar için bu zamanlama o kadar da önemli değildir. Örneği
 
 Bazı uygulamalar belirli bir throughput değeri isterlerken bazıları elinde ne varsa onla idare eder. 
 
-Örneğin bir doküman indirirken belirli bir thourghput değerine ihtiyaç duymayız. İnternet hızımız yavaşken de bu veri inebilir sadece inme süresi artar. 
+Örneğin bir doküman indirirken belirli bir thourghput değerine ihtiyaç duymayız. İnternet hızımız yavaşken de bu veri inebilir, sadece inme süresi artar. 
 
 Öte yandan bir canlı yayın izlerken belirli bir throughput değerine ihtiyaç duyarız. Bu canlı yayını takılmadan izlemek için gereklidir. Aksi takdirde canlı yayını verimsiz şekilde izler ya da izleyemeyiz.
 
 **Security (Güvenlik),** iletim katmanı ile birlikte hem sunum katmanı hem de oturum katmanı ilgilendirir.
 
-Sunum katmanında veriyi şifreliyoruz
+Sunum katmanında veriyi şifreliyoruz.
 
 Oturum katmanınıda ise karşı tarafın oturum doğrulamasını yapıyoruz.
 
@@ -214,9 +214,9 @@ Uygulama katmanı olarak bu iki protokolden hizmet alcağım.
 
 ### `TCP Transfer Control Protocol`
 
-**TCP Güvenilir bir veri iletimi sağlıyor;** Üçlü el sıkışma. (Three way handshake). Veri iletimini bu kurduğu bağ üzerinden yapıyor bu sebeple veri kaybına izin vermiyor. 
+**TCP Güvenilir bir veri iletimi sağlıyor;** üçlü el sıkışma (three way handshake). Veri iletimini bu kurduğu bağ üzerinden yapıyor bu sebeple veri kaybına izin vermiyor. 
 
-**Flow Control (Akış kontrolü);** Gönderen alıcıyı boğmaz. Sunucu, istemciye saniyede 5 kelime göndersem anlayabilir misin? Fazla gelecekse 3 kelime göndereyim gibi. Uç sistemler ile ilgili bir problem.
+**Flow Control (Akış kontrolü);** Gönderen alıcıyı boğmaz. Sunucu, istemciye "Saniyede 5 kelime göndersem anlayabilir misin? Fazla gelecekse 3 kelime göndereyim." gibi. Uç sistemler ile ilgili bir problem.
 
 **Congestion control (Tıkanıklık kontrolü):** Hat sınırı. Uçlar birbirleri ile anlaştıktan sonra hata bağlı yaşanan kısıtın kontrol edilmesi. Hat ile ilgili bir problem. 
 
@@ -234,7 +234,7 @@ Zamanlama sizin için önemliyse..
 
 > Kullanıcı Veribloğu İletişim Kuralları
 
-**Unreliable data transfer (Güvenilir olmayan ver aktarımı);** Verinin gidip gitmediğini garanti etmeden amacı veriyi en hızlı şekilde göndermektir. Zamanlamya çok önem verdiği için veri bütünlüğünü bozma pahasına paketleri gönderir.
+**Unreliable data transfer (Güvenilir olmayan ver aktarımı);** Verinin gidip gitmediğini garanti etmeden amacı veriyi en hızlı şekilde göndermektir. Zamanlamaya çok önem verdiği için veri bütünlüğünü bozma pahasına paketleri gönderir.
 
 **UDP neleri sağlamaz;** 
 
@@ -291,7 +291,7 @@ Uygulama katmanın genel yapısından ve iletim katmanında ihtiyaç duyduğu ba
     <em></em>
 </p>
 
-Web sayfasları, her biri farklı Web sunucularında saklanabilen **nesnelerden** oluşur
+Web sayfasları, her biri farklı Web sunucularında saklanabilen **nesnelerden** oluşur.
 
 Bu objeler HTML dosyaları, JPEG görselleri, Java uygulamaları, ses dosyaları vb. olabilir.
 
@@ -309,9 +309,9 @@ Web sayfaları, birkaç referanslı nesneyi içeren temel HTML dosyalarından ol
 
 Genel yapıdan bahsetmek gerekirse;
 
-`İstemci (client)` tarayıcı üzerinden bir web sayfasına erişmek isteyecek ve bu sunucuya bir HTTP isteği göndercek bu isteğe karşılık gelen cevabı da `sunucu (server)` başka bir HTTP cevabı ile istemciye iletecek.
+`İstemci (client)` tarayıcı üzerinden bir web sayfasına erişmek isteyecek ve bu sunucuya bir HTTP isteği göndercek. Bu isteğe karşılık gelen cevabı da `sunucu (server)` başka bir HTTP cevabı ile istemciye iletecek.
 
-Tabi bu cevaplar her zaman aynı olmayacak istek gönderen cihazın türüne göre değişkenlik gösterecektir.
+Tabi bu cevaplar her zaman aynı olmayacak. İstek gönderen cihazın türüne göre değişkenlik gösterecektir.
 
 <p align="center">
     <img alt="imgName" src="images/Untitled%206.png" width="400">
@@ -321,11 +321,11 @@ Tabi bu cevaplar her zaman aynı olmayacak istek gönderen cihazın türüne gö
 
 **HTTP, veri kaybına sebep olmayan TCP protokolünü kullanır**
 
-> `Hatırlatma:` TCP bağlantı temelli bir protokoldür. `(Üçlü el sıkışma)`
+> `Hatırlatma:` TCP bağlantı temelli bir protokoldür `(Üçlü el sıkışma)`.
 
 - **HTTP stateles**'dir yani sunucu, istemcinin geçmişi hakkında bir bilgi (durum / state) saklamaz.
 
-Öte yandan günlük hayatta HTTP ile iletişimini sağladığımız web sayfarında bizimle ilgili verilerin saklandığını, sitenin bizi tanıdığını görmekteyiz. Bizimle ilgili tutulan bu verilerin HTTP ile bir ilgisi bulunmamakta. Bu veriler cookie, çerez dediğimiz yöntemler ile tarayıcılarda saklanmakta bu saklanan durumların HTTP ile doğrudan bir ilişkisi bulunmuyor. HTTP bu habittatta sadece verinin iletişimi ile ilgilienmekte. 
+Öte yandan günlük hayatta HTTP ile iletişimini sağladığımız web sayfarında bizimle ilgili verilerin saklandığını, sitenin bizi tanıdığını görmekteyiz. Bizimle ilgili tutulan bu verilerin HTTP ile bir ilgisi bulunmamakta. Bu veriler cookie (çerez) dediğimiz yöntemler ile tarayıcılarda saklanmakta. Bu saklanan durumların HTTP ile doğrudan bir ilişkisi bulunmuyor. HTTP bu habittatta sadece verinin iletişimi ile ilgilienmekte. 
 
 ---
 
@@ -362,7 +362,7 @@ Back-of-the-envelope calculation for the time needed to request and receive an H
 # 2.2.2 HTTP mesajları
 > **HTTP messages**
 
-İki tür HTTP mesajı vardır: **(request) istek**, **(response) yanıt**
+İki tür HTTP mesajı vardır: **İstek (request)**, **yanıt (response) **
 
 HTTP ASCII (human-readable format) tipinde mesaj istiyor.
 
@@ -384,11 +384,11 @@ General format of an HTTP request message
 
 ## HTTP istek metotları
 
-**POST methodu:** belirtilen kaynağa bir varlık (entity) göndermek için kullanılır, bu da genellikle sunucuda bir durum değişikliği ya da yan etkilere neden olur. ****
+**POST methodu:** Belirtilen kaynağa bir varlık (entity) göndermek için kullanılır. Bu da genellikle sunucuda bir durum değişikliği ya da yan etkilere neden olur. ****
 
 Bunu web sitelerinin formlarında sıklıkla görebilirsiniz.
 
-**GET methodu:** belirtilen kaynağın bir temsilini ister. GET kullanan istekler yalnızca veri almalıdır. İstek gönderilirken ? ardından kullanıcı verileri dahil edilir.
+**GET methodu:** Belirtilen kaynağın bir temsilini ister. GET kullanan istekler yalnızca veri almalıdır. İstek gönderilirken `?` ardından kullanıcı verileri dahil edilir.
 
 Örnek: `www.somesite.com/animalsearch?monkeys&banana`
 
@@ -408,11 +408,11 @@ Bunu web sitelerinin formlarında sıklıkla görebilirsiniz.
 
 ## HTTP yanıt durumu kodları
 
-- Durum kod'ları, sunucudan istemciye yanıt mesajında 1. satırda görünür.
+- Durum kodları, sunucudan istemciye yanıt mesajında 1. satırda görünür.
 
 **Bazı örnek kodlar:**
 
-**`200 OK`:** istek başarılı oldu
+**`200 OK`:** İstek başarılı oldu
 
 **`301 Moved Permanently`:** Bu yanıt kodu, istenen kaynağın URI'sinin değiştirildiği anlamına gelir. Muhtemelen, yanıtta yeni URI verilecektir.
 
@@ -467,7 +467,7 @@ Cookie: name=value; name2=value2; name3=value3
 
 Çerezler doğrudan bir risk oluşturmazlar. Ancak içerdikleri bilgilerin bir şekilde başka web siteleri tarafından okunması durumunda ya da kopyalanmaları durumunda güvenlik açığı ortaya çıkabilir. Örneğin bir web sitesi kullanıcın kullanıcı adı ve şifresini ya da kullanıcıya otomatik bağlanma sağlayan bilgileri çerezlerde saklıyorsa ve çerezler başkaları tarafından elde edilebilirse web sitesine kullanıcı bilgileri ile girilebilir. Web sitesi bağlanan kullanıcıyı sadece çerez bilgilerine güvenerek onaylıyorsa sorun oluşacaktır.
 
-Çerezler özellikle reklamcılıkta kullanılmaktadır. Ziyaret edilen web sitesinin bir reklam sitesine bağlantı vermesi durumunda bağlantı verilen reklam sitesi kullanıcının ziyaret ettiği sayfaları takip edebilmekte ve ona uygun reklamlar çıkartabilmektedir. Ziyaret edilen bir alış veriş sitesindeki ürünün diğer sitelerde reklam olarak görünmesi çerezler yardımıyla yapılmaktadır. **[[devamı]](https://kisiselveri.com/cerez)**
+Çerezler özellikle reklamcılıkta kullanılmaktadır. Ziyaret edilen web sitesinin bir reklam sitesine bağlantı vermesi durumunda bağlantı verilen reklam sitesi kullanıcının ziyaret ettiği sayfaları takip edebilmekte ve ona uygun reklamlar çıkartabilmektedir. Ziyaret edilen bir alışveriş sitesindeki ürünün diğer sitelerde reklam olarak görünmesi çerezler yardımıyla yapılmaktadır. **[[devamı]](https://kisiselveri.com/cerez)**
 
 # 2.2.4 Web caches
 
@@ -502,7 +502,7 @@ Bir istemci sunucudan bir istek yaptığında bu veri önce web cache üzerinden
 
 - **Access link utilization (Erişim bağlantısı kullanımı)** = **`.97`**
 
-    **Sorun:** yüksek kullanımda büyük kuyruk gecikmeleri!
+    **Sorun:** Yüksek kullanımda büyük kuyruk gecikmeleri!
 
 <p align="center">
     <img alt="imgName" src="images/Untitled%2014.png" width="250">
@@ -518,7 +518,7 @@ Bir istemci sunucudan bir istek yaptığında bu veri önce web cache üzerinden
 
 ## Bu problemi nasıl çözeriz?
 
-Alt network'deki uç birimler bu sınırlı bağlantıyı kullanarak 100Kbit'lik bir nesneyi indirse dahi ara bağlantıda bir aşır bir yükleme meydana getiriyor. Bu sorunu nasıl çözebiliriz. 
+Alt network'deki uç birimler bu sınırlı bağlantıyı kullanarak 100Kbit'lik bir nesneyi indirse dahi ara bağlantıda bir aşır bir yükleme meydana getiriyor. Bu sorunu nasıl çözebiliriz? 
 
 - Bu durumda bir web cahce kullanmanın bana bir avantajı olur mu?
 - Başka bir yöntem var mı?
@@ -562,7 +562,7 @@ Hit rate'imiz düşük ise local web cashe bir işe yaramayacak demektir. Çünk
 
 Bu da erişim bağlantısında düşük kuyuruk geçikmesi anlamına gelir.
 
-**Ortalama Geçikme süresi (average end-end delay)**:  
+**Ortalama gecikme süresi (Average end-end delay)**:  
 0.6 * (delay from origin servers) + 0.4 * (delay when satisfied at cache) 
 = 0.6 (2.01) + 0.4 (~msecs) = ~ 1.2 secs
 
@@ -608,7 +608,7 @@ HTTP'nin diğer versiyonlarına bakcak olursak.
     <em></em>
 </p>
 
-HTTP/2 İstemcinin belirlediği nesne önceliğine göre nesneleri sıralar ve o şekilde iletir. (FCFS olaması gerekli değil)
+HTTP/2 İstemcinin belirlediği nesne önceliğine göre nesneleri sıralar ve o şekilde iletir. (FCFS olaması gerekli değil.)
 
 <p align="center">
     <img alt="imgName" src="images/gif-1.gif" width="800">
@@ -616,7 +616,7 @@ HTTP/2 İstemcinin belirlediği nesne önceliğine göre nesneleri sıralar ve o
     <em></em>
 </p>
 
-İstek sırasına göre paketler geliyor ama ilk paket en büyük paket olduğu için onun yüklenmesini bekliyoruz FCFS
+İstek sırasına göre paketler geliyor ama ilk paket en büyük paket olduğu için onun yüklenmesini bekliyoruz (FCFS).
 
 <p align="center">
     <img alt="imgName" src="images/gif-2.gif" width="800">
@@ -624,7 +624,7 @@ HTTP/2 İstemcinin belirlediği nesne önceliğine göre nesneleri sıralar ve o
     <em></em>
 </p>
 
-Burda ise istek sırasında ilk sırada olan paket en büyük paket olsada önce küçük paketler gönderiliyor ardından ilk istenen büyük paket gönderiliyor buda gereksiz şekilde beklememiz problemini çözmüş oluyor. Band genişliğini de verimli kullanmış oluyoruz. Ve kısmı şekilde tüm paketler yüklenmeme başlamış oldu. **[Time division multiplexing](https://github.com/hasantezcan/computer-networks-notes/blob/main/_data/weeks/week1/Compute-Networks-and-the-Internet.md#tdm-time-division-multiplexing)**
+Burda ise istek sırasında ilk sırada olan paket en büyük paket olsada önce küçük paketler gönderiliyor. Ardından ilk istenen büyük paket gönderiliyor. Bu da gereksiz şekilde beklememiz problemini çözmüş oluyor. Band genişliğini de verimli kullanmış oluyoruz. Ve kısmı şekilde tüm paketler yüklenmeye başlamış oldu. **[Time division multiplexing](https://github.com/hasantezcan/computer-networks-notes/blob/main/_data/weeks/week1/Compute-Networks-and-the-Internet.md#tdm-time-division-multiplexing)**
 
 [**[0]**](https://kinsta.com/learn/what-is-http2/),**[[1]](https://imagekit.io/blog/http2-vs-http1-performance/),[2]**
 
@@ -632,7 +632,7 @@ Burda ise istek sırasında ilk sırada olan paket en büyük paket olsada önce
 
 Biraz daha iletim katmanını da içine almaya başlıyor. Sunum katmanındaki güvenliği de biraz kapsamaya başlıyor.
 
-Bir uygulama katmanı protokülünden ziyade bir iletim katmanı protokolü olarak çalıştığını görmekteyiz. **[[0]](https://kinsta.com/blog/http3/),[[1]](https://blog.cloudflare.com/http3-the-past-present-and-future/),[[2]](https://en.wikipedia.org/wiki/HTTP/3) - daha detaylı araştırlmalı**
+Bir uygulama katmanı protokülünden ziyade bir iletim katmanı protokolü olarak çalıştığını görmekteyiz. **[[0]](https://kinsta.com/blog/http3/),[[1]](https://blog.cloudflare.com/http3-the-past-present-and-future/),[[2]](https://en.wikipedia.org/wiki/HTTP/3) - daha detaylı araştırlmalar**
 
 ---
 
@@ -651,9 +651,9 @@ Bir uygulama katmanı protokülünden ziyade bir iletim katmanı protokolü olar
 
 Bizim için 3 önemli etkeni var 
 
-1. **User againt** İstemcide kullanıcının kullandığı uygulama
-2. **Mail servers** Sunuculardaki posta uygulamaları 
-3. **Simple mail transfer protocol: SMTP** ve iletimi sağlayan bir protokol
+1. **User againt**: İstemcide kullanıcının kullandığı uygulama
+2. **Mail servers**: Sunuculardaki posta uygulamaları 
+3. **Simple mail transfer protocol**: SMTP ve iletimi sağlayan bir protokol
 
 ### 1. User Agent
 Namı diğer e-posta okuyucu (mail reader)
@@ -664,17 +664,17 @@ Gmail, outlook vb. mail client'lar
 
 ### 2. Mail Servers
 
-**Posta kutusu (mailbox):** kullanıcı için gelen mesajları içerir
+**Posta kutusu (mailbox):** Kullanıcı için gelen mesajları içerir
 
 **Mesaj kuyruğu:** outgoing (gönderilecek) e-posta mesajları
 
 ### 3. SMTP protocol
 
-e-posta mesajları göndermek için posta sunucuları arasında kurulan protokol
+E-posta mesajları göndermek için posta sunucuları arasında kurulan protokol
 
-**client (istemci):** e-posta gönderen sunucu
+**Client (istemci):** E-posta gönderen sunucu
 
-**server (sunucu):** e-posta kabul eden sunucu
+**Server (sunucu):** E-posta kabul eden sunucu
 
 <p align="center">
     <img alt="imgName" src="images/Untitled%2018.png" width="600">
@@ -686,7 +686,7 @@ A high-level view of the Internet e-mail system
 
 ## SMTP [`RFC 5321`](https://tools.ietf.org/html/rfc5321)
 
-E-posta mesajını istemciden sunucuya (bağlantıyı başlatan posta sunucusu) güvenilir bir şekilde aktarmak için TCP kullanır. Port 25
+E-posta mesajını istemciden sunucuya (bağlantıyı başlatan posta sunucusu) güvenilir bir şekilde aktarmak için TCP kullanır (Port 25). 
 
 **Doğrudan aktarım (direct transfer):** Sunucuyu (istemci gibi davranan) alıcı sunucuya gönderme
 
@@ -710,10 +710,10 @@ Aktarımın 3 aşaması;
 ## Ali'nin Burak'a e-posta gönderdiği bir senaryo 
 > Scenario: Alice sends e-mail to Bob
 1. Alice, [bob@someschool.edu](mailto:bob@someschool.edu) adresine e-posta göndermek amacıyla kullandığı user agent'ı (kullanıcı aracısı) açar ve e-posta içeriğini hazırlar.
-2. Alice’in user agent'ı, SMTP kullanarak posta sunucusuna bir mesaj gönderir; ***mesaj, mesaj kuyruğuna (message queue) yerleşir.***
-3. Posta sunucusundaki (mail server) SMTP'nin istemci tarafı **Bob'un posta sunucusuyla** TCP bağlantısını açar
-4. SMTP istemcisi Alice'in e-postasını TCP bağlantısı üzerinden gönderir
-5. Bob’un posta sunucusu e-postayı Bob’un posta kutusuna yerleştirir
+2. Alice’in user agent'ı, SMTP kullanarak posta sunucusuna bir mesaj gönderir. ***Mesaj, mesaj kuyruğuna (message queue) yerleşir.***
+3. Posta sunucusundaki (mail server) SMTP'nin istemci tarafı **Bob'un posta sunucusuyla** TCP bağlantısını açar.
+4. SMTP istemcisi Alice'in e-postasını TCP bağlantısı üzerinden gönderir.
+5. Bob’un posta sunucusu e-postayı Bob’un posta kutusuna yerleştirir.
 6. Bob, kullanıcı aracısını kullanarak e-postasını okuyabilir.
 
 <p align="center">
