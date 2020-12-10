@@ -10,11 +10,11 @@
 
 Bu bölümde bu sorulara cevap arayacağız;
 
-- Bu derste uygulama katmanının servisleri öğrenmeye devam edicez.
+- Bu derste uygulama katmanının servisleri öğrenmeye devam edeceğiz.
 - The Domain Name System DNS
 - P2P uygulamaları
 - İçerik sağlayıcı ağların uygulama katmanındaki hizmetlerinden burada karşılaştıkları hizmetlerden bahsedeceğiz.
-- İletim katmanına geçiş.
+- İletim katmanına geçiş
     - Uygulama katmanın iletim katmanına veri iletmesi için neye ihtiyacı var?
     - İletim katmanı bu gelen veriyi nasıl kontrol ediyor?
 - UDP, TCP ve soket programlama
@@ -23,7 +23,7 @@ Bu bölümde bu sorulara cevap arayacağız;
 
 > İlgili bölümün **[videolu anlatımı](https://www.youtube.com/watch?v=6lRcMh5Yphg&feature=youtu.be)**, **[ders anlatım sunumu](http://gaia.cs.umass.edu/kurose_ross/videos/2/4/2.4_video_posted.pptx)**.
 
-DNS, internet üzerinde hizmet veren sunucuların addreslerini tutan büyük bir rehber. Tıpkı telefon rehberleri gibi. Kişilerin telefonları bilmek yerine isimleri ile arama yaptığımız telefon rehberleri ile aynı yaklaşım ile çalışıyor.
+DNS, internet üzerinde hizmet veren sunucuların adreslerini tutan büyük bir rehberdir. Tıpkı telefon rehberleri gibi. Kişilerin telefonlarını bilmek yerine isimleri ile arama yaptığımız telefon rehberleri ile aynı yaklaşımla çalışıyor.
 
 [https://www.youtube.com/watch?time_continue=355&v=72snZctFFtA&feature=emb_logo](https://www.youtube.com/watch?time_continue=355&v=72snZctFFtA&feature=emb_logo)
 
@@ -35,29 +35,29 @@ Hayır, herkesin tek bir sunucuya bunu sorması problem yaratabilir.
 
 - Eğer tek olan bu DNS sunucusu çalışmayı durduğunda isimden ip adresi dönüştürmeleri gerçekleştirilemeyecek. Ve kimse aradığı yere ulaşamayacak.
 - Milyarlarca cihazdan gelen DNS sorularını tek bir sunucun çözümlemesi, bu devasa trafiğe tek başına göğüs germesi çok da uygulanabilir bir senaryo değildir.
-- Tek bir merkezi sunucu olsa bunu dünyada nereye konumlandıracağız. Amerika'ya mı avrupaya mı hindistana mı?
+- Tek bir merkezi sunucu olsa bunu dünyada nereye konumlandıracağız. Amerika'ya mı Avrupa'ya mı Hindistan'a mı?
 - Bu sunucunun bakımını kim yapacak ya da bu tek olan sunucuyu bakıma aldığımızda DNS sorgularına kim cevap verecek?
 
-Bu sebeplerden ötürü merkezi tek bir DNS sunucsu kullanmıyor da dağıtık bir çok DNS sunusu kullanıyoruz. 
+Bu sebeplerden ötürü merkezi tek bir DNS sunucsu kullanmıyor, dağıtık bir çok DNS sunusu kullanıyoruz. 
 
-**Örneğin;** Comcast DNS sunucularına günlük gelen DNS sorugları 600 milyar adet, Akamai DNS sunucularaına günlük 2.2 trilyon DNS sorgusu yapılmakta bu örneklere de bakıldığınıda DNS isteklerin tek bir elden karşılanmamsı yerine dağıtık sistemler ile çözümlenmesinin daha doğru olduğunu görebilmekteyiz.
+**Örneğin;** Comcast DNS sunucularına günlük gelen DNS sorugları 600 milyar adet, Akamai DNS sunucularaına günlük 2.2 trilyon DNS sorgusu yapılmakta. Bu örneklere de bakıldığında DNS isteklerinin tek bir elden karşılanması yerine dağıtık sistemler ile çözümlenmesinin daha doğru olduğunu görebilmekteyiz.
 
-Tamam bu sunucuyu tek yapmaaylım ama ne kadar dağıtalım 100 sunucuya mı bölelim 1 milyon sunucu mu belirleyelim. Buna nasıl karar vereceğiz?
+Tamam bu sunucuyu tek yapmayalım ama ne kadar dağıtalım? 100 sunucuya mı bölelim 1 milyon sunucu mu belirleyelim? Buna nasıl karar vereceğiz?
 
-## Bir DNS nasıl olamalı
+## Bir DNS nasıl olmalı?
 
 **Güvenli olmalı:** bizi doğru sitelere yönlendirmeli, sahte ayna sitelere yönlendirmemeli. Güvenlir olmayan DNS'leri kullanmamalıyız.
 
 **Organizasyonel, fiziksel olarak merkezi olmayan:** Kayıtlarından sorumlu milyonlarca farklı kuruluş
 
 **Günde trilyonlarca sorguyu işler:** Yazdığından çok daha fazla okuma
-performans önemlidir: hemen hemen her İnternet işlemi DNS ile etkileşir.
+performans önemlidir. Hemen hemen her İnternet işlemi DNS ile etkileşir.
 
 **Muazzam dağıtılmış veritabanı:**
 
-## DNS: dağıtılmış, hiyerarşik bir veritabanı
+## DNS: Dağıtılmış, hiyerarşik bir veritabanı
 
-> DNS: a distributed, hierarchical database
+> DNS: A distributed, hierarchical database
 
 Tek bir DNS ile çalışmamız gerektiğini öğrendik. Peki birden fazla olan bu DNS sunucularını nasıl kurgulayacağız?
 - Hiyararşik, dağıtık veritabanı yapısı ile kurgulacağız.
@@ -69,28 +69,28 @@ Tek bir DNS ile çalışmamız gerektiğini öğrendik. Peki birden fazla olan b
 </p>
 
 - En tepede adreslerin bulunduğu ya da sorguların yönlendirildiği bir **root sunucuları** olacak.
-- Root sunucuların bi altında **Top Level Domain, TLD** dediğimiz sunucular olacak. Bunlar **.com .edu .tr .org**
-- **Authoritative DNS sunucuları** ise; birimlerde kuruluşlarda kullanılan DNS sunucular. Mesela Pamukkale Üniversitesinin kendi DNS sunucusu var. Bunun altında kendi domainlarının kayıtları mevcut.
+- Root sunucuların bi altında **Top Level Domain (TLD)** dediğimiz sunucular olacak. Bunlar; **.com .edu .tr .org**
+- **Authoritative DNS sunucuları** ise birimlerde kuruluşlarda kullanılan DNS sunuculardır. Mesela Pamukkale Üniversitesi'nin kendi DNS sunucusu var. Bunun altında kendi domainlerinin kayıtları mevcut.
 
 ### Senaryo
 
-Bir istemci [www.amazon.com](http://www.amazon.com/) sayfasını açmaya çalıştı. Bu durumda hangi adımlar gerçekleşir.
+Bir istemci [www.amazon.com](http://www.amazon.com/) sayfasını açmaya çalıştı. Bu durumda hangi adımlar gerçekleşir?
 
-- istemci .com DNS sunucusunu bulmak için root sunucuyu sorgular
-- istemci, [amazon.com](http://amazon.com/) DNS sunucusunu almak için .com DNS sunucusunu sorgular
-- istemci [www.amazon.com](http://www.amazon.com/) için IP adresi almak üzere [amazon.com](http://amazon.com/) DNS sunucusunu sorgular
+- İstemci .com DNS sunucusunu bulmak için root sunucuyu sorgular.
+- İstemci, [amazon.com](http://amazon.com/) DNS sunucusunu almak için .com DNS sunucusunu sorgular.
+- İstemci [www.amazon.com](http://www.amazon.com/) için IP adresi almak üzere [amazon.com](http://amazon.com/) DNS sunucusunu sorgular.
 
 Bir web sayfasının yüklenmesiyle ilgili 4 DNS sunucusu vardır:
 
 **[DNS recursor](https://www.cloudflare.com/en-gb/learning/dns/dns-server-types/#recursive-resolver):** Recursor, kütüphanenin belirli bir yerdeki kitabı bulması istenen bir kütüphaneci olarak düşünülebilir. DNS recursor, web tarayıcıları gibi uygulamalar aracılığıyla istemci makinelerden sorgu almak için tasarlanmış bir sunucudur. Tipik olarak recursor, istemcinin DNS sorgusunu karşılamak için ek isteklerde bulunmaktan sorumludur.
 
-**[Root nameserver](https://www.cloudflare.com/en-gb/learning/dns/glossary/dns-root-server/):** Root server, insan tarafından okunabilir ana host adlarının IP adreslerine çevrilmesinin (çözümlenmesinin) ilk adımıdır. Bir kütüphanedeki farklı kitap raflarına işaret eden bir dizin gibi düşünülebilir. Diğer bir tabirle bu server'ler dns isteiğinin alt kollardaki sunuculara ulaşmasında bir referans görevi görür.
+**[Root nameserver](https://www.cloudflare.com/en-gb/learning/dns/glossary/dns-root-server/):** Root server, insan tarafından okunabilir ana host adlarının IP adreslerine çevrilmesinin (çözümlenmesinin) ilk adımıdır. Bir kütüphanedeki farklı kitap raflarına işaret eden bir dizin gibi düşünülebilir. Diğer bir tabirle bu serverlar dns isteiğinin alt kollardaki sunuculara ulaşmasında bir referans görevi görür.
 
-DNS sisteminin en üstünde bulunurlar ve sunucu adı – ip dönüşümünün başladığı yerdir. Gelen istekleri TLD(Top Level Domain – Üst düzey Etki Alanı) sunucularına yönlendirirler.
+DNS sisteminin en üstünde bulunurlar ve sunucu adı – ip dönüşümünün başladığı yerdir. Gelen istekleri TLD (Top Level Domain – Üst düzey Etki Alanı) sunucularına yönlendirirler.
 
 Root DNS'leri ICANN belirler/yönetir. 
 
-Ülkemizde bulunan, Root DNS IP’lerine bağlı Servarlar;
+Ülkemizde bulunan, Root DNS IP’lerine bağlı serverlar;
 
 - University of Maryland – İstanbul
 - ICANN – İstanbul
@@ -98,13 +98,13 @@ Root DNS'leri ICANN belirler/yönetir.
 - NASA – İstanbul
 - Netnod – Ankara
 
-**[TLD nameserver](https://www.cloudflare.com/en-gb/learning/dns/dns-server-types/#tld-nameserver):** Top level domain server (TLD), bir kitaplıktaki belirli bir kitap rafı olarak düşünülebilir. Bu ad sunucusu, belirli bir IP adresini aramada sonraki adımdır ve bir hostname'in son bölümünü barındırır. (örneğin [example.com](http://example.com/)'da, TLD sunucusu **"com"** dur).
+**[TLD nameserver](https://www.cloudflare.com/en-gb/learning/dns/dns-server-types/#tld-nameserver):** Top level domain server (TLD), bir kitaplıktaki belirli bir kitap rafı olarak düşünülebilir. Bu ad sunucusu, belirli bir IP adresini aramada sonraki adımdır ve bir hostname'in son bölümünü barındırır. (Örneğin [example.com](http://example.com/)'da TLD sunucusu **"com"** dur).
 
 **[Authoritative nameserver](https://www.cloudflare.com/en-gb/learning/dns/dns-server-types/#authoritative-nameserver):** Bu son nameserver, belirli bir adın tanımına çevrilebildiği bir raf kitap üzerindeki bir sözlük olarak düşünülebilir. Yetkili ad sunucusu, ad sunucusu sorgusundaki son duraktır. Yetkili ad sunucusunun *(authoritative name server)* istenen kayda erişimi varsa, istenen ana bilgisayar adı için IP adresini ilk isteği yapan DNS Recursor'a (kütüphaneciye) geri döndürecektir.
 
 ## Local DNS name server'leri
 
-Kendiniz de bir DNS sunucusu oluşturabilirsiniz istediğiniz ip'leri istediğiniz domain'ler ile ilişkilendirebilirsiniz. 
+Kendiniz de bir DNS sunucusu oluşturabilirsiniz istediğiniz IP'leri istediğiniz domain'ler ile ilişkilendirebilirsiniz. 
 
 Tabi bu durum güvenlik sorunlarını da orataya çıkarabilir. Fason siteleri kendi domain name server'inizde bilinen domain ile servis edip kişilerin hassas bilgilerine domain adıyla güven vererek ulaşabilirsiniz. 
 
@@ -112,13 +112,13 @@ Tabi bu durum güvenlik sorunlarını da orataya çıkarabilir. Fason siteleri k
 
 # DNS Sorgu türleri nelerdir?
 
-Tipik bir DNS aramasında üç tür sorgu gerçekleşir. Bu sorguların bir kombinasyonunu kullanarak, DNS çözümlemesi için optimize edilmiş bir işlem, daha hızlı cevap alamamızı sağlar.
+Tipik bir DNS aramasında üç tür sorgu gerçekleşir. Bu sorguların bir kombinasyonunu kullanarak DNS çözümlemesi için optimize edilmiş bir işlem, daha hızlı cevap almamızı sağlar.
 
 3 tür DNS sorgusu mevcuttur.
 
-## DNS name resolution: iterated query
+## DNS name resolution: Iterated query
 
-> DNS adı çözümlemesi: yinelenen sorgu
+> DNS adı çözümlemesi: Yinelenen sorgu
 
 **Örnek:** **engineering.nyu.edu**'daki host, **gaia.cs.umass.edu** için IP adresi istiyor
 
@@ -135,9 +135,9 @@ Sorgu gönderilirken iterated (yinelenen) olarak gönderiliyor.
 - Local DNS serverin root DNS'e sorması ile client'ın direk root DNS sorması arasında bir performans farkı vardır. Bu şekilde gördüğümüz azaltmış bir DNS sorgusu yöntemidir.
 - Gördüğünüz gibi bir ismin sorgulanması için 4 sorgu 4 cevap gerekti. **gaia.cs.umass.edu** için tekrar bir sorgu yapıldığı taktirde eğer local DNS bunu cache'inde tutuyorsa bu istek cevap trafiğine gerek kalmadan direk cevap verecektir.
 
-## DNS name resolution: recursive query
+## DNS name resolution: Recursive query
 
-> DNS adı çözümlemesi: özyinelemeli sorgu
+> DNS adı çözümlemesi: Özyinelemeli sorgu
 
 Yine **engineering.nyu.edu**'daki host, **gaia.cs.umass.edu** için IP adresi istiyor fakat bu sefer DNS sorgusu recursive olarak yapılıyor.
 
@@ -153,11 +153,11 @@ Iterated sorguda bu böyle değildi DNS serverler ile direk kedisi konuşyor cev
     <em>Recursive query schema</em>
 </p>
 
-**Bu iki DNS sorgusu türünü şu şekilde örnekleyebiliriz.**
+**Bu iki DNS sorgusu türünü şu şekilde örnekleyebiliriz:**
 
-Yoldan geçen bir kişiye falanca pastanenin yerini sorduğunuzu düşünün. O bi dk kardeşim bakkala bir sorayım deyip gidiyor, bakkal bi dk kardeşim şu polis onu bilir deyip gidiyor. Sonra polis amirine soruyor. Amir cevabı polise veriyor polis cevabı bakkala veriyor bakkalda en başta sizin sorduğunuz adama. En son adam gelip size adresi söylüyor. Bu durumu recursive sorguya benzetebiliriniz.  
+Yoldan geçen bir kişiye falanca pastanenin yerini sorduğunuzu düşünün. "O bi dk kardeşim bakkala bir sorayım." diyerek gidiyor. Bakkal "Bi dk kardeşim şu polis onu bilir." diyerek gidiyor. Sonra polis amirine soruyor. Amir cevabı polise veriyor, polis cevabı bakkala veriyor, bakkal da en başta sizin sorduğunuz adama. En son adam gelip size adresi söylüyor. Bu durumu recursive sorguya benzetebiliriniz.  
 
-Iterated sorguda ise yoldan geçen adam kardeşim bakkala sor diyor bakkal kardeşim polise sor diyor polis kardeşim amirime sor diyor ve siz direk muhtaplarla muhattap oluyorsunuz. Ek aracıları beklemekten tasarruf ediyorsunuz.
+Iterated sorguda ise yoldan geçen adam "Kardeşim bakkala sor." diyor. Bakkal "Kardeşim polise sor." diyor. Polis "Kardeşim amirime sor." diyor. Ve siz direkt muhataplarla muhatap oluyorsunuz. Ek aracıları beklemekten tasarruf ediyorsunuz.
 
 ## [Non-recursive query](https://www.cloudflare.com/en-ca/learning/dns/what-is-dns/#:~:text=Non-recursive%20query%20-)
 
@@ -175,7 +175,7 @@ Cache'de domain name ve ip adreslerini tutarsak cache'den hızlıca cevap verile
 
 - Cashe'lemek geri dönüş zamanını geliştirir!
     - TLD sunucuları genellikle local nameserver'ları cashe'ler (önbelleğe alır)
-- Burda bir handikap var: **Ip adresi değişmiş olabilir! (out-of-date)** Bu durumda cashe kalıcı olamamalıdır. Arada tekrar sorgulanıp güncel referanslar cashe olarak saklanmalıdır.
+- Burda bir handikap var: **Ip adresi değişmiş olabilir (out-of-date)!** Bu durumda cashe kalıcı olmamalıdır. Arada tekrar sorgulanıp güncel referanslar cashe olarak saklanmalıdır.
 
 ---
 
@@ -183,7 +183,7 @@ Cache'de domain name ve ip adreslerini tutarsak cache'den hızlıca cevap verile
 
 > DNS kayıtları
 
-DNS: kaynak kayıtlarını depolayan dağıtılmış veritabanı
+DNS: Kaynak kayıtlarını depolayan dağıtılmış veritabanı.
 
 **RR format:** `(name, value, type, ttl)`
 
@@ -193,7 +193,7 @@ Buradaki "A", adres anlamına gelir ve bu en temel DNS kaydı türüdür. Belirl
 
 Örneğin, [cloudflare.com](http://cloudflare.com/)'un DNS kayıtlarını alırsanız, A kaydı şu anda 104.17.210.9 şeklinde bir IP adresi döndürür.
 
-A kayıtları yalnızca **IPv4** adreslerini tutar. Bir web sitesinin **IPv6** adresi varsa, bunun yerine bir **"AAAA" kaydı** kullanır. 
+A kayıtları yalnızca **IPv4** adreslerini tutar. Bir web sitesinin **IPv6** adresi varsa, bunun yerine bir **"AAAA"** kaydı kullanır. 
 
 Aşağıda bir A kaydı örneği verilmiştir:
 
@@ -250,7 +250,7 @@ CNAME kaydı örneği:
 
 Bir DNS 'mail exchange' (MX) kaydı, e-postayı bir posta sunucusuna yönlendirir.
 
-MX kaydı, e-posta iletilerinin Basit Posta Aktarım Protokolüne(Simple Mail Transfer Protocol) (SMTP, tüm e-postalar için standart protokol) göre nasıl yönlendirilmesi gerektiğini belirtir. CNAME kayıtları gibi, bir MX kaydı da her zaman başka bir domain'i işaret etmelidir.
+MX kaydı, e-posta iletilerinin Basit Posta Aktarım Protokolüne (Simple Mail Transfer Protocol (SMTP, tüm e-postalar için standart protokol)) göre nasıl yönlendirilmesi gerektiğini belirtir. CNAME kayıtları gibi, bir MX kaydı da her zaman başka bir domain'i işaret etmelidir.
 
 MX kaydı örneği:
 
@@ -280,11 +280,11 @@ MX kaydı örneği:
 </table>
 </div>
 
-Bu MX kayıtlarının domain'lerinden önceki 'priority' numaraları tercihi gösterir; daha düşük 'öncelik(priority)' değeri tercih edilir.
+Bu MX kayıtlarının domain'lerinden önceki 'priority' numaraları tercihi gösterir. Daha düşük 'öncelik (priority)' değeri tercih edilir.
 
-Sunucu her zaman ilk olarak mailhost1'i deneyecektir çünkü 10 20'den küçüktür. Mesaj gönderme hatası olursa, sunucu varsayılan olarak mailhost2'yi kullanacaktır
+Sunucu her zaman ilk olarak mailhost1'i deneyecektir. Çünkü 10 20'den küçüktür. Mesaj gönderme hatası olursa, sunucu varsayılan olarak mailhost2'yi kullanacaktır.
 
-E-posta hizmeti ayrıca bu MX kaydını, her iki sunucunun da eşit önceliğe sahip olması ve eşit miktarda posta alması için yapılandırabilir: Bu yapılandırmada, e-posta sağlayıcısının iki sunucu arasındaki yükü eşit şekilde dengelemesini sağlar.
+E-posta hizmeti ayrıca bu MX kaydını, her iki sunucunun da eşit önceliğe sahip olması ve eşit miktarda posta alması için yapılandırabilir. Bu yapılandırmada e-posta sağlayıcısının iki sunucu arasındaki yükü eşit şekilde dengelemesini sağlar.
 
 **[[cloudflare.com/what-is-a-DNS-MX-record?]](https://www.cloudflare.com/en-ca/learning/dns/dns-records/dns-mx-record/)**
 
@@ -317,7 +317,7 @@ Günümüzde, DNS TXT kayıtlarının en önemli kullanımlarından ikisi, e-pos
 
 ## `type = NS record`
 
-NS, "nameserver" anlamına gelir ve ad nameserver kaydı, o alan için hangi DNS sunucusunun yetkili olduğunu gösterir (ör. hangi sunucu gerçek DNS kayıtlarını içerir). Temel olarak, NS kayıtları İnternet'e bir etki alanının IP adresini bulmak için nereye gideceğini söyler. Bir domain'de genellikle, o domain için birincil ve yedek nameserver'ları gösterebilen birden çok NS kaydı bulunur. Düzgün yapılandırılmış NS kayıtları olmadan, kullanıcılar bir web sitesini veya uygulamayı yükleyemez.
+NS, "nameserver" anlamına gelir ve ad nameserver kaydı, o alan için hangi DNS sunucusunun yetkili olduğunu gösterir (ör. hangi sunucu gerçek DNS kayıtlarını içerir). Temel olarak, NS kayıtları İnternet'e bir etki alanının IP adresini bulmak için nereye gideceğini söyler. Bir domain'de genellikle, o domain için birincil ve yedek nameserver'ları gösterebilen birden çok NS kaydı bulunur. Düzgün yapılandırılmış NS kayıtları olmadan kullanıcılar bir web sitesini veya uygulamayı yükleyemez.
 
 NS kaydına bir örnek:
 
@@ -359,7 +359,7 @@ NS kayıtlarının hiçbir zaman CNAME kaydını gösteremeyeceğini unutmayın.
 `Message header:` 
 
 - **identification:** 16 bit # for query, reply to query uses same #
-- **flags:** query or reply, recursion desired, recursion available, reply is authoritative
+- **flags:** Query or reply, recursion desired, recursion available, reply is authoritative
 - **other:**
     - name, type fields for a query
     - RRs in response to query
@@ -370,9 +370,9 @@ NS kayıtlarının hiçbir zaman CNAME kaydını gösteremeyeceğini unutmayın.
 
 DNS sorgusu tekrar sorulabilir bir sorgu olduğu için UDP ile gönderilebilir.
 
-- Sana bir soru sorucam. + Sor! - Soruyorum gibi bir üçlü el sıkşma ile sormayız (TCP)
+- "-Sana bir soru sorucam. + Sor! - Soruyorum" gibi bir üçlü el sıkşma ile sormayız (TCP).
 
-Bunun yerine: - Bir sorgum var bunun cevabını doğrudan bana gönder gibi bir soru ile sorabiliriz (UDP)
+Bunun yerine: - Bir sorgum var bunun cevabını doğrudan bana gönder gibi bir soru ile sorabiliriz (UDP).
 
 ## **DNS Veritabanına Kayıt Ekleme**
 
@@ -380,11 +380,11 @@ Bunun yerine: - Bir sorgum var bunun cevabını doğrudan bana gönder gibi bir 
 
 Bir örnek üzerinden gidelim.
 
-**Senaryo:** yeni bir girişim başlatıyoruz adı da "Yırttık Abicim"
+**Senaryo:** Yeni bir girişim başlatıyoruz, adı da "Yırttık Abicim"
 
 İlk olarak [yirttikabicim.com](http://yirttikabicim.com)'u bir DNS kayıt sitesine kayıt ettirmemiz gerekiyor. (ör [https://www.namecheap.com/](https://www.namecheap.com/)) 
 
-- kayıt şirketi NS, A RR'leri .com TLD sunucusuna ekler:
+- Kayıt şirketi NS, A RR'leri .com TLD sunucusuna ekler:
 
     ```js
     (yirttikabicim.com, dns1.yirttikabicim.com, NS)
@@ -428,15 +428,15 @@ Eşler, sunucuları veya sabit bilgisayarlar tarafından merkezi koordinasyon ih
     <em>P2P Architecture over Server-client Architecture</em>
 </p>
 
-İstemci sunucu modelinde sunucuların adresi (ip) sabittir. İstemciler sunucuları bir kere tanırlar ve gerikalan sürede bu tanışıklıkla haberleşirler. Fakat P2P modelinde değişken ve akışkan bir sitem olduğu için sunucuların ip değişiklikeri durumuna mimarinin adepte olması gerekmektedir.
+İstemci-sunucu modelinde sunucuların adresileri (IP) sabittir. İstemciler sunucuları bir kere tanırlar ve geri kalan sürede bu tanışıklıkla haberleşirler. Fakat P2P modelinde değişken ve akışkan bir sitem olduğu için sunucuların IP değişiklikeri durumuna mimarinin adepte olması gerekmektedir.
 
 ## Hangi sistemler P2P mimarsini kullanır
 
 - P2P file sharing (BitTorrent)
-- streaming (KanKan)
+- Streaming (KanKan)
 - VoIP (Skype)
 
-## Dosya dağıtımı: client-server modeli ve P2P modeli
+## Dosya dağıtımı: Client-server modeli ve P2P modeli
 
 Şimdi iki farklı mimari ile çalışan iki sitemde bir takım dosya iletimlerinin nasıl gerçekleştiğini göreceğiz.
 
@@ -446,20 +446,20 @@ Eşler, sunucuları veya sabit bilgisayarlar tarafından merkezi koordinasyon ih
     <em></em>
 </p>
 
-### client-server modeli
+### Client-server modeli
 
 Sistemdeki cihaz sayısı ne kadar fazla olursa sunucunun bu dosyaları bu cihazlara ulaştırması da bu oranda yavaşlayacaktır.
 
-Bu birçok cihaz o ağ içindeki ortak kullanılan badgenişliğinden faydalanması sebebi ile ne kadar çok cihaz o kadar çok trafik demektir.
+Bu birçok cihaz o ağ içindeki ortak kullanılan band genişliğinden faydalanması sebebi ile ne kadar çok cihaz o kadar çok trafik demektir.
 
-**server transmission (sunucu iletimi):** N dosya kopyasını sırayla göndermeli (upload):
+**Server transmission (sunucu iletimi):** N dosya kopyasını sırayla göndermeli (upload):
 
-- **`bir` nüshayı gönderme süresi:** F/us
+- **`Bir` nüshayı gönderme süresi:** F/us
 - **`N` nüshayı gönderme süresi:** NF/us
 
-**client (istemci):** her client (istemci) dosya kopyasını indirmelidir.
+**Client (istemci):** Her client (istemci) dosya kopyasını indirmelidir.
 
-- **dmin =** en düşük istemci indirme hızı
+- **dmin :** En düşük istemci indirme hızı
 - **minimum istemci indirme süresi:** F / dmin
 
 <p align="center">
@@ -468,23 +468,23 @@ Bu birçok cihaz o ağ içindeki ortak kullanılan badgenişliğinden faydalanma
     <em></em>
 </p>
 
-### peer to peer modeli
+### Peer to peer modeli
 
 Bu modelde istemciler dosyayı, parçalar halinde başka peer'lerden de edinebiliyorlar. Örneğin en uçdaki cihaz sunucudan dosyayı bekleme yerine kendine yakın peer'dan bu dosyayı edineceği için sunucuyu bekleme süresi (download rete'i) azalacaktır. Sunucudan yükü almasından mütevellit.
 
-En üstteki sunucu sayısı ve işlevi yine bir çarpan olarak kabul edelsede burada peer'lar arasındaki bu iletişim de performansa artı bir çarpan olarak etki etmektedir.
+En üstteki sunucu sayısı ve işlevi yine bir çarpan olarak kabul edilse de burada peer'lar arasındaki bu iletişim de performansa artı bir çarpan olarak etki etmektedir.
 
-**server transmission (sunucu iletimi):** en az bir kopya yüklemelidir (upload).
+**Server transmission (Sunucu iletimi):** En az bir kopya yüklemelidir (Upload).
 
-- **`bir` nüshayı gönderme süresi:** F/us
+- **`Bir` nüshayı gönderme süresi:** F/us
 
-**client (istemci):** her client (istemci) dosya kopyasını indirmelidir.
+**Client (İstemci):** Her client (istemci) dosya kopyasını indirmelidir.
 
-- **minimum istemci indirme süresi:** F / dmin
+- **Minimum istemci indirme süresi:** F / dmin
 
-**`clients (istemciler):`** toplu olarak NF bitlerini indirmelidir
+**`Clients (istemciler):`** Toplu olarak NF bitlerini indirmelidir
 
-- **maksimum yükleme oranı (maksimum indirme oranını sınırlama)** =
+- **Maksimum yükleme oranı (Maksimum indirme oranını sınırlama)** :
 
     <p align="left">
     <img alt="imgName" src="images/Untitled%207.png" width="80">
@@ -498,11 +498,11 @@ En üstteki sunucu sayısı ve işlevi yine bir çarpan olarak kabul edelsede bu
     <em></em>
 </p>
 
-## client-server modeli ve P2P modeli: `örnek`
+## Client-server modeli ve P2P modeli: `örnek`
 
-**İstemcinin upload oranı:** u
+**İstemcinin upload oranı** : u
 
-**dosyanın büyüklüğü / upload oranı:** 1 saat
+**Dosyanın büyüklüğü / Upload oranı **: 1 saat
 
 Her kullanıcının paylaştığı upload sayısı: 10u
 
@@ -518,9 +518,9 @@ Kullanıcı sayısı arttıkça (uzaklaştıkça) server-client modelinde dağı
 
 ## BitTorrent'de P2P dosya dağıtımı nasıl gerçekleşiyor?
 
-İndireceğiniz dosyaları indirmek için kullandığınız bir referans dosya mevcut. Bunu torrent istemcinize tanıttıktan sonra torrent istemciniz indirmeyi başlatmak için hazır oluyor. İndirmek istediğiniz dosyayı ne kadar fazla peer barındırıyorsa ve servis ediyorsa ki bunlara **seed** diyoruz indirme hızınız da o kadar yükseliyor. 
+İndireceğiniz dosyaları indirmek için kullandığınız bir referans dosya mevcut. Bunu torrent istemcinize tanıttıktan sonra torrent istemciniz indirmeyi başlatmak için hazır oluyor. İndirmek istediğiniz dosyayı ne kadar fazla peer barındırıyorsa ve servis ediyorsa (ki bunlara **seed** diyoruz) indirme hızınız da o kadar yükseliyor. 
 
-Peki hangi peer'ın hangi dosyaya sahip olduğunu nereden biliyoruz. Bunun için **tracker** dediğimiz yapılar mevcut. Tracker dosyayı paylaşan ve bu dosyaları indiren cihazların listesini tutuyor. Sonrasında siz bir dosyayı indirmeyi talep ettiğinizde sizin için en verimli peer'ları size listeleyip dosyayı en hızlı şekilde indirmenize olanak sağlıyor.
+Peki hangi peer'ın hangi dosyaya sahip olduğunu nereden biliyoruz? Bunun için **tracker** dediğimiz yapılar mevcut. Tracker dosyayı paylaşan ve bu dosyaları indiren cihazların listesini tutuyor. Sonrasında siz bir dosyayı indirmeyi talep ettiğinizde sizin için en verimli peer'ları size listeleyip dosyayı en hızlı şekilde indirmenize olanak sağlıyor.
 
 <p align="center">
     <img alt="imgName" src="images/Untitled%2010.png" width="400">
@@ -528,28 +528,28 @@ Peki hangi peer'ın hangi dosyaya sahip olduğunu nereden biliyoruz. Bunun için
     <em></em>
 </p>
 
-**Peer indirdiğini dosyayı paylaşmaz ise ne olur? yani Seed'lik yapmazsa?**
+**Peer indirdiğini dosyayı paylaşmaz ise ne olur? Yani seed'lik yapmazsa?**
 
 > Leecher
 
 - Tüm peer'ların bunu yapması halinde sistem çalışamaz hale gelir. Seed'ler bu sistemin devamlılığındaki bel kemiğidir.
 - Ama siz sadece indirme yapmak isteyip yükleme yapmak istemezseniz tracker'lar tarafından indirme listelerinde barındırılmazsınız. Tek taraflı trafiğinize devam edersiniz.
 - **Bu durumda torrent ağı size nasıl bir yaptırım uygular ve bundan nasıl kurtulursunuz?**
-    - Torrent indirme dosyalarıın bulduğu forum tarzı sitelere çoğu zaman bir üyelikle giriş yapılır. Bu üyelik genellikle referans ile verildiği için sahip olması biraz meşşakkatlidir. Bu siteler sizin indirme yükleme oranlarınızı takip eder eğer bir leecher (asalaklık-sülük) durumu tespit edilirse sizin ip'nizi engelleyebilirler ve üyeliğinizi dondurabilirler.
-    - Bu yaptırmdan korunmannın en kolay yolu leecher olmaktan kaçınmaktır. **[[daha fazlası için]](https://shareconnector.net/how-torrents-penalize-leechers/)**
+    - Torrent indirme dosyaların bulduğu forum tarzı sitelere çoğu zaman bir üyelikle giriş yapılır. Bu üyelik genellikle referans ile verildiği için sahip olması biraz meşakatlidir. Bu siteler sizin indirme yükleme oranlarınızı takip eder. Eğer bir leecher (asalaklık-sülük) durumu tespit edilirse sizin IP'nizi engelleyebilirler ve üyeliğinizi dondurabilirler.
+    - Bu yaptırmdan korunmanın en kolay yolu leecher olmaktan kaçınmaktır. **[[daha fazlası için]](https://shareconnector.net/how-torrents-penalize-leechers/)**
 
 **Bir tracker'ın varlığı bu sistemi merkezi hale getirmez mi?**
 
-- Evet kullanıcı dosya indirmeden önce herseferinde tracker ile konuştuğu için burda bir merkezileşme söz konusu. 
-*Bu durumu gidermek için;* **dağıtık tracker'lar** mevcut.
+- Evet, kullanıcı dosya indirmeden önce her seferinde tracker ile konuştuğu için burda bir merkezileşme söz konusu. 
+*Bu durumu gidermek için* **dağıtık tracker'lar** mevcut.
 
 Bunun sonucunda artık merkezi olamayan fakat peer'ları takip etmeye devam eden bir yapı ile bu duruma çözüm olmaya çalışıyor. **DNS gibi düşünebilirsiniz.** 
 
-Bir kullanıcının torrent sisteminden ayrılamasına **churn** diyoruz. Bu churn olan kullanıcıları direk olarak sistemden dışalayamıyoruz böyle bir yapıs sözkonusu değil. Sadece churn durumlarına karşı sistemi ayakta tutmak için belli yöntemler geliştiriyoruz. Bu yöntem;
+Bir kullanıcının torrent sisteminden ayrılamasına **churn** diyoruz. Bu churn olan kullanıcıları direk olarak sistemden dışlayamıyoruz. Böyle bir yapı söz konusu değil. Sadece churn durumlarına karşı sistemi ayakta tutmak için belli yöntemler geliştiriyoruz. Bu yöntem;
 
-Bir dosyayı tek bir parça halinde değilde birden fazla parça halinde tutmak. Bu parçalara **chunks** diyoruz. Ayrılıan kullanıcı tüm ağı tıkamasın diye sistem parçalı şekilde bir indirme yapıyor. Bu sayede sistem churn'ları tolere edebilir bir yapı haline geliyor. 
+Bir dosyayı tek bir parça halinde değil de birden fazla parça halinde tutmak. Bu parçalara **chunks** diyoruz. Ayrılan kullanıcı tüm ağı tıkamasın diye sistem parçalı şekilde bir indirme yapıyor. Bu sayede sistem churn'ları tolere edebilir bir yapı haline geliyor. 
 
-## BitTorrent: requesting, sending file chunks
+## BitTorrent: Requesting, sending file chunks
 
 ### Requesting chunks
 
@@ -559,13 +559,13 @@ Bir dosyayı tek bir parça halinde değilde birden fazla parça halinde tutmak.
 
 ### Sending chunks: tit-for-tat
 
-> dişe diş, kısasa kısas
+> Dişe diş, kısasa kısas
 
-- Torrent üyesimiz **(Ayşe)**, ona en yüksek oranda chuck gönderen 4 peer'a elindeki chunkları gönderir.
-    - Ayşe diğer peer'lara chunk göndermeyi keser. (choked)
+- Torrent üyesimiz **(Ayşe)** ona en yüksek oranda chuck gönderen 4 peer'a elindeki chunkları gönderir.
+    - Ayşe diğer peer'lara chunk göndermeyi keser (choked).
     - Bu en iyi 4 peer her 10 saniyede bir tekrar hesaplanır.
 - Her 30 saniyede yeni bir peer seçilir ve rastgele chunk'lar gönderilmeye başlanır.
-    - Bu yeni peer'a iyimser şekilde paket göndermeme ambargosu uygulanmaz. (unchocked)
+    - Bu yeni peer'a iyimser şekilde paket göndermeme ambargosu uygulanmaz (unchocked).
     - Bu yeni seçilen peer belki bir sonraki sefere en iyi 4 peer'dan biri olabilir.
 
 <p align="center">
@@ -595,14 +595,14 @@ Bu gün netflix youtube gibi platformlara rakip bir uygulama çıkarmak istesek 
 
 **Çözüm:** Dağıtık ve ölçeklenebilir bir sistem üretmek. Kullanıcılara uygulama bazlı çeşitlilik sunmak. 
 
-Video yayını yaprken en zorlanıdığımız kısmın ölçekleme olduğunu söylemiştik peki videoları nasıl ölçekleyebiliriz. 
+Video yayını yaparken en zorlanıdığımız kısmın ölçekleme olduğunu söylemiştik. Peki videoları nasıl ölçekleyebiliriz?
 
-Bildiğimiz üzere videolar aslında arka arkaya gösterilen resimlerden oluşmakta. Bu resim sayısını saniye başına arttırdığımızda insan gözü bu resimleri daha akışkan bir video olarak algılamakta.  (Genel olarak saniye başına 24 kare)
+Bildiğimiz üzere videolar aslında arka arkaya gösterilen resimlerden oluşmakta. Bu resim sayısını saniye başına arttırdığımızda insan gözü bu resimleri daha akışkan bir video olarak algılamakta. (Genel olarak saniye başına 24 kare.)
 
 O zaman bu resimleri bir şekilde sıkıştırıp servis ettiğimiz videoları daha küçük boyutlarda kullanıcılara ulaştırabiliriz. Bunu yaparken iki yöntemden faydalanabiliriz.
 
-1. **Spatical codding (uzamsa kodlama):** Bu yöntem ile resimde aynı rengin olduğu pixel'leri mavi, mavi, mavi, mavi ... gibi değilde  burada mavi renkten 10 tane var gibi sıkışmış bir bilgi ile gönderebiliriz. Bu durum gönderdiğimiz bilgiyi kendi içindeki tekradan kurtarıp az bilgi ile çok şey ifade etmemize katkı sağlayacak aynı zamanda daha küçük bir veri ilede performansımızıda katkı sağlayacaktır. pixelleri özetlemek
-2.  **Temporal coding (zamansal kodlama):** Bu yöntem ile de videoda sadece değişen bölümleri yenileyip o bilgi parçıklarını kullanıcıya iletme yolunu izliyoruz. Bir videonun sol kısmı öbür kare ile birerbir aynı ise bunun bilgisini yeni karede tekrar göndermek sadece gönderdiğimiz verinin boyunutunu artırdığından bu kısımlar zaten bir önce gönderdiğimiz karede var diye var sayarak sadece değişen bölümlerin  yeni bilgilerini gönderiyoruz.
+1. **Spatical codding (uzamsa kodlama):** Bu yöntem ile resimde aynı rengin olduğu pixel'leri mavi, mavi, mavi, mavi ... gibi değilde  burada mavi renkten 10 tane var gibi sıkışmış bir bilgi ile gönderebiliriz. Bu durum gönderdiğimiz bilgiyi kendi içindeki tekrardan kurtarıp az bilgi ile çok şey ifade etmemize katkı sağlayacak aynı zamanda daha küçük bir veri ile de performansımıza da katkı sağlayacaktır. (Pixelleri özetlemek.)
+2.  **Temporal coding (zamansal kodlama):** Bu yöntem ile de videoda sadece değişen bölümleri yenileyip o bilgi parçıklarını kullanıcıya iletme yolunu izliyoruz. Bir videonun sol kısmı öbür kare ile bire bir aynı ise bunun bilgisini yeni karede tekrar göndermek sadece gönderdiğimiz verinin boyutunu arttırdığından bu kısımlar zaten bir önce gönderdiğimiz karede var diye var sayarak sadece değişen bölümlerin  yeni bilgilerini gönderiyoruz.
 
 <p align="center">
     <img alt="imgName" src="images/Untitled%2011.png" width="400">
@@ -628,7 +628,7 @@ The problem of not allocating enough data for complex sections could be solved b
 
 - MPEG 1 (CD-ROM) 1.5 Mbps
 - MPEG2 (DVD) 3-6 Mbps
-    - MPEG2'den sonra **VBR** kullanılmaya başlandı.
+- MPEG2'den sonra **VBR** kullanılmaya başlandı.
 - MPEG4 (often used in Internet, 64Kbps – 12 Mbps)
 
 ## Örnek video yayını senaryosu
@@ -639,11 +639,11 @@ The problem of not allocating enough data for complex sections could be solved b
     <em></em>
 </p>
 
-İstemci sisteme bağlandıktan sonra ilgli videoyu izlmek için işlemi başlatıyor. Bu dakikadan sonra sunucumuz video yayını yapmaya başlıyor. 
+İstemci sisteme bağlandıktan sonra ilgli videoyu izlemek için işlemi başlatıyor. Bu dakikadan sonra sunucumuz video yayını yapmaya başlıyor. 
 
-Ama tabiki önümüze çıkan engeller oluyor peki ne bunlar;
+Ama tabi ki önümüze çıkan engeller oluyor. Peki ne bunlar?
 
-İstemcimiz videoyu izlemeye başladıktan sonra evdeki başka bir kullanıcınında interneti kullanması ile evdeki sınırlı bandgenişliği ikisine de yetemeye başlıyor. Böylece bizim kullanıcımıza düşen thruoghput değeri azalıyor. En başta 10Mbps ile izlediği videoyu şimdi 5Mbps'lık internet bağlantısı ile izleyemez hale geliyor. İnterneti sunucun ona gönderdiği paketleri almaya yetemiyor ve arada paket kayıpları yaşamaya başlıyor.
+İstemcimiz videoyu izlemeye başladıktan sonra evdeki başka bir kullanıcınında interneti kullanması ile evdeki sınırlı band genişliği ikisine de yetmemeye başlıyor. Böylece bizim kullanıcımıza düşen thruoghput değeri azalıyor. En başta 10Mbps ile izlediği videoyu şimdi 5Mbps'lık internet bağlantısı ile izleyemez hale geliyor. İnterneti sunucun ona gönderdiği paketleri almaya yetemiyor ve arada paket kayıpları yaşamaya başlıyor.
 
 <p align="center">
     <img alt="imgName" src="images/Untitled%2013.png" width="600">
@@ -653,7 +653,7 @@ Ama tabiki önümüze çıkan engeller oluyor peki ne bunlar;
 
 Bu durumda 10Mbps'lık throughput ile izlediği görüntüyü 5Mbps'lık bağlantı ile akıcı şekilde izleyemeyeceği için görüntüyü tam zamanlı değil de biraz sunucu biraz önden gider şekilde izleyebilir. Videoyu izlerken sunucu onun izleyeceği videoyu gönderdiği gibi birazdan izlediği videoyu da hazır edecektir. 
 
-Öteyandan hala eş zamanlı izlmek istiyorsa sunucu görüntü kalitesinden ödün vererek daha çok sıkışmış videoyu gönderebilir. Bu şekilde düşük throughput değeri ile bu görüntüyü anlık olarak izleyebilir. (paket kaybı yaşamadan) 
+Öte yandan hala eş zamanlı izlemek istiyorsa sunucu görüntü kalitesinden ödün vererek daha çok sıkışmış videoyu gönderebilir. Bu şekilde düşük throughput değeri ile bu görüntüyü anlık olarak izleyebilir (paket kaybı yaşamadan).
 
 <p align="center">
     <img alt="imgName" src="images/giphy_(3).gif" width="300">
@@ -661,7 +661,7 @@ Bu durumda 10Mbps'lık throughput ile izlediği görüntüyü 5Mbps'lık bağlan
     <em></em>
 </p>
 
-**continuous playout constraint (akıcı oynatma'dan alıkoyma):** Eş zamanlı izleme durumu karşılanamadığında istemci tarafında bir buffer oluşturup bekletip (şu meşhur bekleme yuvarlağı). Videoyu bu şekilde izletme.
+**Continuous playout constraint (akıcı oynatma'dan alıkoyma):** Eş zamanlı izleme durumu karşılanamadığında istemci tarafında bir buffer oluşturup bekletir (şu meşhur bekleme yuvarlağı). Videoyu bu şekilde izletmez.
 
 <p align="center">
     <img alt="imgName" src="images/Untitled%2014.png" width="400">
@@ -671,7 +671,7 @@ Bu durumda 10Mbps'lık throughput ile izlediği görüntüyü 5Mbps'lık bağlan
 
 ## Streaming multimedia: DASH
 
-**D**ynamic, **A**daptive **S**treaming over **H**TTP
+**D**ynamic, **A**daptive **S**treaming Over **H**TTP
 
 <p align="center">
     <img alt="imgName" src="images/Untitled%2015.png" width="600">
@@ -679,23 +679,23 @@ Bu durumda 10Mbps'lık throughput ile izlediği görüntüyü 5Mbps'lık bağlan
     <em></em>
 </p>
 
-Bu aslında daha demin bahsettiğimiz ölçekleme probleminin nasıl gerçekleştiğini bizlere daha da yakından anlatacak. İstemciye göre dinamik adaptif bir yayın sunmak ve bunu sunarken de daha çevik olmak burada ilk amaç. Bu sebeple;
+Bu aslında az önce bahsettiğimiz ölçekleme probleminin nasıl gerçekleştiğini bizlere daha da yakından anlatacak. İstemciye göre dinamik adaptif bir yayın sunmak ve bunu sunarken de daha çevik olmak burada ilk amaç. Bu sebeple;
 
 **Server;**
 
-- Video dosyasını bir çok chunk'a böler
-- Her chunk farklı oranlarda kodlanmıştır
+- Video dosyasını bir çok chunk'a böler.
+- Her chunk farklı oranlarda kodlanmıştır.
 - Farklı oranlarda kodlanan chunklar farklı dosyalarda barındırılır.
 - Bu varyasyonar farklı CDN node'larında barındırılır.
 
-**`manifest file:`** farklı chunk'lar için URL'ler sağlar
+**`Manifest file`**: Farklı chunk'lar için URL'ler sağlar
 
 **Client;**
 
-- Periyodik olarak sunucudan istemciye bant genişliğini ölçer
+- Periyodik olarak sunucudan istemciye bant genişliğini ölçer.
 - Manifest dosyasına sorarak her defasında farklı chunk'dan istek yapar.
-    - Mevcut bant genişliğine göre sürdürülebilir maksimum kodlama oranını seçer (en optimal)
-    - Farklı zamanlarda farklı kodlama hızları (480p 1080p vb..) seçebilir (o andaki mevcut bant genişliğine bağlı olarak) ve farklı sunuculardan
+    - Mevcut bant genişliğine göre sürdürülebilir maksimum kodlama oranını seçer (en optimal).
+    - Farklı zamanlarda farklı kodlama hızları (480p 1080p vb..) seçebilir (o andaki mevcut bant genişliğine bağlı olarak) ve farklı sunuculardan.
 
 Tüm bunları istemcinin durumları göz edilerek seçilir.
 
@@ -709,17 +709,17 @@ When, what encoding rate, where
 
 **Seçenek 1:** tekil, devasa bir sunucu
 
-- single point of failure (tek noktanın zafiyeti)
-- point of network congestion (ağ tıkanıklığı)
-- istemciye uzak ve muhtemelen sıkışık(tıkanık) path'ler
+- Single point of failure (tek noktanın zafiyeti)
+- Point of network congestion (ağ tıkanıklığı)
+- İstemciye uzak ve muhtemelen sıkışık(tıkanık) path'ler
 
-kısaca bu seçenek **`ölçeklenebilir değil !!`**
+Kısaca bu seçenek **`ölçeklenebilir değil !!`**
 
-**Seçenek 2:** İçeriklerin kopyalarını cografi bölgelere göre konumlandırıp ismtecilerin kendilerine yakın olanı tercih etmelerini sağla! Bunu gerçeklendiriken iki yaklaşımdan faydalanabiliriz;
+**Seçenek 2:** İçeriklerin kopyalarını coğrafi bölgelere göre konumlandırıp istemcilerin kendilerine yakın olanı tercih etmelerini sağlar! Bunu gerçekleştirirken iki yaklaşımdan faydalanabiliriz;
 
-**enter deep :** Dünyadaki en büyük içerik dağıtım ağına sahip olan akamai'in de uyguladığı yönetem olan bu yöntem; İçeriklerin saklancağı sunucuları tüm ISP'lere dağıtacak şekilde oluşturmak. Dünyadaki her ISP'nin olduğu yerde bir akami sunucusu ile istemcileri içierikleri bu noktalardan sağlıyor.
+**Enter deep :** Dünyadaki en büyük içerik dağıtım ağına sahip olan akamai'in de uyguladığı yönetem olan bu yöntem içeriklerin saklancağı sunucuları tüm ISP'lere dağıtacak şekilde oluşturmaktır. Dünyadaki her ISP'nin olduğu yerde bir akami sunucusu ile istemcileri içierikleri bu noktalardan sağlıyor.
 
-**birig home :** Bu yöntemi bir diğer içerik dağıtım ağı olan Limelight networks uyguluyor. Bu yaklaşımda içerik sunuclaru ISP'lere değerilde IXP'lere konumlandırılıyor bu sayede daha az sunucu ile bu işi çözmüş oluyorlar. 
+**Birig home :** Bu yöntemi bir diğer içerik dağıtım ağı olan Limelight networks uyguluyor. Bu yaklaşımda içerik sunuclaru ISP'lere değil de IXP'lere konumlandırılıyor. Bu sayede daha az sunucu ile bu işi çözmüş oluyorlar. 
 
 <p align="center">
     <img alt="imgName" src="images/ba.gif" width="600">
@@ -731,11 +731,11 @@ kısaca bu seçenek **`ölçeklenebilir değil !!`**
 
 Bazı içerik sağlayıcılar yüksek yoğunluklu ISP'leri atlayarak kendi içeriklerini kendileri dağıtıyorlar.
 
-İçerikler ağ üzerindeki Netlix sunucularından istemciye değilde. Uçtan uça bir hizmet ile iletim gerçekleşiyor.
+İçerikler ağ üzerindeki Netlix sunucularından istemciye değil de uçtan uça bir hizmet ile iletim gerçekleşiyor.
 
 **OTT'deki sorun ne peki?**
 
-- Akamai sunucularında hangi içeriği tutmalıyım ki bana istekde bulunduğunda ona doğru yerden doğru kopyayı ona verebileyim ve hangi sunucum manifestoda yazan kurallar gereği cevap vermeli.
+- Akamai sunucularında hangi içeriği tutmalıyım ki bana istekde bulunduğunda ona doğru yerden doğru kopyayı ona verebileyim ve hangi sunucum manifestoda yazan kurallar gereği cevap vermeli?
     - En popüler içerikler tüm sunucularda paylaşılmalı; popülerleşmeye başlayan içierklerin ise bölgesel olarak sunuculara aktarımı çözüm olabilir.
     - Gelen iseklerden elde edilen veriye göre o sunucuları özelliştirmek ihtiyaçlara göre sunucuları şekillendirmek.
 
@@ -759,23 +759,23 @@ Bazı içerik sağlayıcılar yüksek yoğunluklu ISP'leri atlayarak kendi içer
     <em></em>
 </p>
 
-Soketler uygulamların haberleşimesi için onları uçtan uca bağlayan işlemlerdir. 
+Soketler uygulamaların haberleşimesi için onları uçtan uca bağlayan işlemlerdir. 
 
 Soket'ler TCP ile de UDP ile de çalışabilir.
 
-- UDP: unreliable datagram
-- TCP: reliable, byte stream-oriented
+- UDP: Unreliable datagram
+- TCP: Reliable, byte stream-oriented
 
 ## UDP ile soket porgramlama
 
 Paketler sıralı gelmeyebilir. Ama bu sorun çözüleblir halde.
 
-- no “connection” between client and server:
-- no handshaking before sending data
-- sender explicitly attaches IP destination address and port # to each packet
-- receiver extracts sender IP address and port# from received packet
+- No “connection” between client and server:
+- No handshaking before sending data
+- Sender explicitly attaches IP destination address and port # to each packet
+- Receiver extracts sender IP address and port# from received packet
 
-**UDP:** transmitted data may be lost or received out-of-order
+**UDP:** Transmitted data may be lost or received out-of-order
 
 **Application viewpoint:**
 
@@ -805,16 +805,16 @@ Paketler sıralı gelmeyebilir. Ama bu sorun çözüleblir halde.
 
 **Client must contact server**
 
-- server process must first be running
-- server must have created socket (door) that welcomes client’s contact
+- Server process must first be running
+- Server must have created socket (door) that welcomes client’s contact
 
 **Client contacts server by:**
 
 - Creating TCP socket, specifying IP address, port number of server process
 - **when client creates socket:** client TCP establishes connection to server TCP
-- when contacted by client, server TCP creates new socket for server process to communicate with that particular client
-    - allows server to talk with multiple clients
-    - source port numbers used to distinguish clients (more in Chap 3)
+- When contacted by client, server TCP creates new socket for server process to communicate with that particular client
+    - Allows server to talk with multiple clients
+    - Source port numbers used to distinguish clients (more in Chap 3)
 
 **Application viewpoint**
 
