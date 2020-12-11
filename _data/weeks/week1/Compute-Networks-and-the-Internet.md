@@ -536,7 +536,7 @@ Evrensel ISP'ler kadar büyük çaplı olmasa da yine aynı mantıkta çalışan
   <img alt="img-name" src="images/Untitled%2024.png" width="500">
 </p>
 
-Ayrıca **`içerik sağlayıcı ağlar (content provider networks)`** -ör. Google, Microsoft gibi- hizmetleri ve içeriklerini son kullanıcılara yaklaştırmak için kendi özel ağlarını kullanabilirler.
+Ayrıca **`içerik sağlayıcı ağlar (content provider networks)`** -ör. Google, Microsoft gibi- hizmetleri ve içeriklerini son kullanıcılara yaklaştırmak için **kendi özel ağlarını** kullanabilirler. Bu sayede ISP'lerdeki yoğunluktan da kurtulmuş olurlar.
 
 <p align="center">
   <img alt="img-name" src="images/Untitled%2025.png" width="500">
